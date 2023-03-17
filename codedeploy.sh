@@ -11,3 +11,6 @@ if [ "$(sudo service codedeploy-agent status | grep running)" == "" ]; then
     sudo service codedeploy-agent start
 fi
 " ssm-user
+
+
+sed -i 's/yfs.yfs.app.identifyconnection=Y/#yfs.yfs.app.identifyconnection=Y/g' filename 
