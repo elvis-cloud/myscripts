@@ -20,3 +20,5 @@ Generate JWTs with the required claims (e.g., user information, expiration time,
 Verify incoming JWTs using the public key stored in the truststore (truststore.jks).
 
 - Use JWTs for Authentication and Authorization: Implement the necessary logic in Sterling OMS to use JWTs for authentication and authorization. This may involve validating the incoming JWT, extracting the necessary claims, and making authorization decisions based on those claims.
+
+https://www.ibm.com/docs/en/order-management-sw/10.0?topic=authentication-configuring-jwt
