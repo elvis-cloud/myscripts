@@ -1,0 +1,22 @@
+To generate an RSA key pair, you would typically use a tool or library specifically designed for cryptographic operations, such as OpenSSL, Bouncy Castle, or the Java KeyPairGenerator class. These tools generate the key pair locally on your system.
+
+- Generate RSA Key Pair: Generate an RSA key pair using a tool of your choice. You can use OpenSSL or a similar tool to generate a private key (private.pem) and a corresponding public key (public.pem).
+
+- Create a JKS Truststore: Convert the public key (public.pem) to a certificate format that can be imported into a JKS truststore. Then, create a JKS truststore using the keytool utility:
+
+- Import Truststore in Sterling OMS: Import the truststore (truststore.jks) into Sterling OMS. The process to import truststore may vary depending on the Sterling OMS version. Refer to the Sterling OMS documentation for detailed instructions.
+
+- Create a Customer Managed Key in AWS KMS: Create a Customer Managed Key (CMK) in AWS KMS. This key will be used for encryption and decryption of the JWT signing key. Note down the Key ID of the CMK.
+
+- Encrypt the JWT Signing Key: Use the AWS SDK for Java to encrypt the JWT signing key (private key) using the AWS KMS CMK created in the previous step. Store the encrypted key securely, such as in a database or secure file storage.
+
+- Retrieve and Decrypt the JWT Signing Key: When you need to sign a JWT, retrieve the encrypted signing key from the secure storage, and use the AWS SDK to decrypt it using the KMS CMK. This will give you the plaintext signing key (private key) that can be used to sign the JWT.
+
+- Integrate JWT in Sterling OMS: Implement JWT generation and verification logic in Sterling OMS. This involves the following steps:
+
+Include a JWT library in your OMS project. You can use a Java library like Nimbus JOSE+JWT or Auth0 JWT library.
+Configure the library to use the decrypted private key to sign the JWTs.
+Generate JWTs with the required claims (e.g., user information, expiration time, etc.) for authentication and authorization purposes.
+Verify incoming JWTs using the public key stored in the truststore (truststore.jks).
+
+- Use JWTs for Authentication and Authorization: Implement the necessary logic in Sterling OMS to use JWTs for authentication and authorization. This may involve validating the incoming JWT, extracting the necessary claims, and making authorization decisions based on those claims.
