@@ -1,8 +1,4 @@
-
-Hello,
-
-To reduce deployment failures, we have resolved to implement continuous monitoring of the lower environments. The checks will be conducted four times a day and will take an average of 10 minutes. We have already identified and addressed several potential deployment issues through this process.
-
-The steps to be followed are outlined in the document provided. It is important to note that the development team does not have the necessary access permissions to perform any of these steps.
-
-Thank you.
+{
+  "detail-type": ["EC2 Instance Rebalance Recommendation"],
+  "source": ["aws.ec2"]
+}
