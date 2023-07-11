@@ -68,3 +68,47 @@ Add new line
 
 mount -a
 df -h 
+
+Installing Splunk
+Create a free Splunk account at www.splunnk.com
+Login to Splunk account
+
+Click on Splunk enterprise
+Select linux and download the tgz package via the command line
+Download splunk into the tmp directory.
+
+Create a splunk user -- accept all defaults
+adduser splunk
+
+Ensure the splunk user can access the Splunk dir
+chown splunk:splunk /opt/splunk 
+chown splunk:splunk /tmp/splunk-xxxxxxx.tgz 
+
+Switch to the splunk user
+su - splunk
+
+Extract splunk in the splunk dir
+cd /opt
+tar -zxvf /tmp/splunk-xxxxx.tgz
+
+cd splunk
+ls
+
+Start splunk
+/opt/splunk/bin/splunk start --accept-license
+
+set an admin user & password
+
+Access the splunk ui using the instance's public ip on port 8000
+
+Log in with the username and password specified. 
+
+To verify that splunk is working, click on search and reporting 
+Search the following:
+index=_internal
+index=_audit
+
+Enable boot start (As root)
+/opt/splunk/bin/splunk enable boot-start -user splunk -systemd-managed 0
+
+Reboot the instance
