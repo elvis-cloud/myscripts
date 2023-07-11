@@ -1,10 +1,25 @@
-Currently Cloudwatch is sending to Pagerduty
-App Dynamics is going to Teams
-Datadog is going to Teams
-Only portal access for ServiceNow currently.  Can only open up and view self-service tickets to help-desk.
-Jira is only Work Management and Not Service Management.
+Write a meeting report based on the following meeting notes
+Objective of the meeting
+Need to start reporting on SLA/SLO
+Implementing and following ITIL standards
 
-Current recommendation is to open tickets in ServiceNow only.  All monitoring needs to funnel into ServiceNow, would be great if we could use PagerDuty that funneled into ServiceNow.
+Current setup
+Currently Cloudwatch is forwarding notifications to Pagerduty
+App Dynamics alerts are forwarded to MS Teams
+Datadog alerts are forwarded to MS Teams
+Only portal access for ServiceNow has been provided.  We can only open up and view self-service tickets to help-desk.
+Jira only has the Work Management module and Not the Service Management module.
+
+Issues with the current setup
+JIRA Work Management is purely Kanban so no metrics on time to respond/repair is captures
+They use ServiceNOW but we have very limited access (basic customer Portal access)
+disparate sources of data, so no common area to capture SLA/SLO
+A single source of truth is required to facilitate the collection of metrics
+
+Recommendation
+Current recommendation is to open tickets in ServiceNow only. 
+All monitoring tools need to funnel into ServiceNow. 
+It would be great if we could set up PagerDuty that funneled into ServiceNow.
 
 July 11, 2023 - Internal Meeting
 	• Need to start reporting on SLA/SLO 
@@ -18,3 +33,30 @@ July 11, 2023 - Internal Meeting
 		○ As of today, all of our (PESA) ticket actioning happens through PD since that's the only thing we have access to
 		○ They want us to be in THEIR pagerduty for on-call
 	• The proposal here (from PESA) would be to take this disparate sources of incoming issues (DD, AppDynamics, Cloudwatch) and either throw them into PD or directly into SNOW so that we have a common area to capture SLA/SLO
+
+
+Summary:
+The meeting was held to address the need for reporting on Service Level Agreements (SLAs) and Service Level Objectives (SLOs) as well as the implementation and adherence to ITIL standards. The current setup and issues were discussed, and a recommendation was proposed to address the identified challenges.
+
+Discussion:
+
+Current Setup:
+The participants reviewed the current setup, which involved the following configurations:
+Cloudwatch is currently forwarding notifications to PagerDuty.
+App Dynamics alerts are forwarded to MS Teams.
+Datadog alerts are also forwarded to MS Teams.
+ServiceNow access is limited to the basic customer portal, allowing only the viewing and handling of self-service tickets by the help-desk.
+Jira is currently utilizing the Work Management module only, lacking the Service Management module.
+
+Issues with the Current Setup:
+The following issues were identified with the current setup:
+Jira's Work Management module solely utilizes Kanban, making it unable to capture metrics on time to respond/repair.
+The limited access to ServiceNow restricts the collection of comprehensive data, hindering the ability to establish SLA/SLO reporting.
+Disparate data sources lead to the absence of a common area for capturing SLA/SLO data.
+The absence of a single source of truth hampers the collection of accurate metrics.
+
+Recommendation:
+Based on the discussion, the following recommendations were put forth:
+Open tickets exclusively in ServiceNow to consolidate the ticketing system and streamline the reporting process.
+Funnel all monitoring tools, including Cloudwatch, App Dynamics, and Datadog, into ServiceNow for centralized data collection.
+Explore the possibility of setting up PagerDuty to directly integrate with ServiceNow for improved incident management and data synchronization.
