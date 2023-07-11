@@ -23,3 +23,48 @@ docker run -d -p 8000:8000 -e "SPLUNK_START_ARGS=--accept-license" -e "SPLUNK_PA
 index="_internal" | stats count by sourcetype
 | tstats count where index=_internal by sourcetype
 
+Setting up the AWS env
+ubuntu instance with 2 cpu cores 4 gb ram 
+Add a volume of 20 gb - enable delete on termination
+Security group - All traffic from anywhere
+
+apt-get update -y 
+apt-get dist-upgrade -y
+Reboot the instance 
+
+As root 
+Find out name of disk we added
+fdisk -l
+
+Create physical vol
+pvcreate /dev/xvdb
+
+Verify creation
+pvs
+
+Create a splunk volume group
+vgcreate splunkvg /dev/xvdb
+
+Confirm creation
+vgs
+
+Create logical volume
+lvcreate -l 100%FREE -n splunk splunkvg
+
+confirm creation
+lvs
+
+Create a file system
+mkfs.xfs /dev/mapper/splunkvg-splunk (tab complete)
+
+Create a splunk dir
+mkdir /opt/splunk
+
+Mofify the file system table
+nano /etc/fstab
+
+Add new line
+/dev/mapper/splunkvg-splunk	/opt/splunk	xfs	defaults	0	0
+
+mount -a
+df -h 
