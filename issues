@@ -1,0 +1,20 @@
+Currently Cloudwatch is sending to Pagerduty
+App Dynamics is going to Teams
+Datadog is going to Teams
+Only portal access for ServiceNow currently.  Can only open up and view self-service tickets to help-desk.
+Jira is only Work Management and Not Service Management.
+
+Current recommendation is to open tickets in ServiceNow only.  All monitoring needs to funnel into ServiceNow, would be great if we could use PagerDuty that funneled into ServiceNow.
+
+July 11, 2023 - Internal Meeting
+	• Need to start reporting on SLA/SLO 
+	• They do not follow ITIL standards
+		○ They use JIRA Work Management (but not service management) - JIRA Work Management is purely Kanban? so no metrics on time to respond/repair
+		○ They use SNOW but we have very limited access (basic customer Portal access)
+	• They have Datadog (we have no access)
+	• They have CloudWatch
+	• App Dynamics / Datadog are in use and are being processed "entirely" through Teams. We can see examples of AppDynamic and DD both sending notifications directly to Teams through a Teams Integration
+	• They have Pagerduty in Prod (only Cloudwatch is sending here). PD creates a ticket in ServiceNow (but again we don't have access to SNOW)
+		○ As of today, all of our (PESA) ticket actioning happens through PD since that's the only thing we have access to
+		○ They want us to be in THEIR pagerduty for on-call
+	• The proposal here (from PESA) would be to take this disparate sources of incoming issues (DD, AppDynamics, Cloudwatch) and either throw them into PD or directly into SNOW so that we have a common area to capture SLA/SLO
