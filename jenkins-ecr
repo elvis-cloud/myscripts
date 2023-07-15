@@ -54,22 +54,6 @@ pipeline {
 
         }
 
-  
-
-        stage('Build-artifact') {
-
-            steps {
-
-                dir('app') {
-
-                    sh "npm install"
-
-                }
-
-            }
-
-        }
-
     // Building Docker images
 
         stage('Building image') {
