@@ -4,11 +4,11 @@ pipeline {
 
     environment {
 
-        AWS_ACCOUNT_ID="463570358144"
+        AWS_ACCOUNT_ID="11111111111111111"
 
         AWS_DEFAULT_REGION="us-east-1"
 
-        IMAGE_REPO_NAME="js-app"
+        IMAGE_REPO_NAME="your-repo"
 
         IMAGE_TAG="1.0.0"
 
