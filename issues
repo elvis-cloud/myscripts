@@ -1,1 +1,23 @@
+To get started, log in to your AWS Management Console using your AWS account credentials.
+Once logged in, navigate to the AWS CloudTrail service by either typing "CloudTrail" in the search bar at the top of the page and selecting the service from the results, or by finding it under the "Management & Governance" section in the services menu.
+Viewing Event History:
 
+After accessing the CloudTrail service, you will land on the "Trails" page by default, which shows a list of existing trails. Trails are configurations that specify which events you want to log and where to store the logs.
+To view the events directly, click on the "Event history" link in the left-hand navigation pane. This will take you to the "Event history" page, where you can see a chronological list of recent events captured by CloudTrail.
+Filtering Events:
+
+On the "Event history" page, you will find a list of CloudTrail events with columns displaying information such as Event Name, Event Time, User Identity, Event Source, and more.
+You can use the "Time range" filter on the right-hand side to select a specific time range to view events within that period.
+The "Event name" dropdown allows you to filter events based on their specific names, such as "CreateBucket," "RunInstances," etc.
+The "Event source" dropdown lets you filter events based on the AWS service that generated the events, like "s3.amazonaws.com" for Amazon S3 events, "ec2.amazonaws.com" for Amazon EC2 events, and so on.
+You can also filter events based on the user identity (username or ARN) that initiated the API calls using the "User identity" filter.
+Additionally, the "Resource name" filter can be used to search for events related to specific AWS resources.
+Searching Events:
+
+If you are looking for specific events or keywords within the events, you can use the search bar located at the top of the "Event history" page.
+Simply enter the search term or keyword in the search bar, and CloudTrail will filter the events to display only those that match the search criteria.
+Viewing Event Details:
+
+To get more detailed information about a specific event, click on the event in the list. This will expand the event to show additional details.
+The expanded view of an event includes information such as the "Event name," "Event ID," "Event time," "Event source," "Resource type," "Resource name," "User identity," "Source IP address," and more.
+The event details also provide information about the API call and its parameters, which can be useful for troubleshooting or auditing purposes.
