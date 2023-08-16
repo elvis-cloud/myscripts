@@ -112,3 +112,5 @@ Enable boot start (As root)
 /opt/splunk/bin/splunk enable boot-start -user splunk -systemd-managed 0
 
 Reboot the instance
+
+ThruputProcessor [6662 parsing] - Current data throughput (261 kb/s) has reached maxKBps. As a result, data forwarding may be throttled. Consider increasing the value of maxKBps in limits.conf.
