@@ -114,3 +114,7 @@ Enable boot start (As root)
 Reboot the instance
 
 ThruputProcessor [6662 parsing] - Current data throughput (261 kb/s) has reached maxKBps. As a result, data forwarding may be throttled. Consider increasing the value of maxKBps in limits.conf.
+
+08-16-2023 11:10:47.257 -0700 INFO  ThruputProcessor [6662 parsing] - Current data throughput (267 kb/s) has reached maxKBps. As a result, data forwarding may be throttled. Consider increasing the value of maxKBps in limits.conf.
+08-16-2023 11:11:08.852 -0700 INFO  AutoLoadBalancedConnectionStrategy [6663 TcpOutEloop] - Connected to idx=52.13.140.100:9997, pset=0, reuse=0.
+08-16-2023 11:11:38.771 -0700 INFO  AutoLoadBalancedConnectionStrategy [6663 TcpOutEloop] - Connected to idx=44.229.254.133:9997, pset=0, reuse=0.
