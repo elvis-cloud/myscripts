@@ -14,3 +14,5 @@ fi
 
 
 sed -i 's/yfs.yfs.app.identifyconnection=Y/#yfs.yfs.app.identifyconnection=Y/g' filename 
+
+ls /path/to/source_folder | grep "\.txt$" | xargs -I {} cp {} /path/to/destination_folder
