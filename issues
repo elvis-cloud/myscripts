@@ -1,45 +1,16 @@
-eksctl utils associate-iam-oidc-provider --region=YOUR-REGION --cluster=YourClusterNameHere --approve
+Cost optimization summary 
 
-eksctl create iamserviceaccount --name ebs-csi-controller-sa --namespace kube-system --cluster YourClusterNameHere --attach-policy-arn arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy --approve  --role-only  --role-name AmazonEKS_EBS_CSI_DriverRole
+After reviewing the AWS resources currently in use, we observed the following. 
 
-eksctl create addon --name aws-ebs-csi-driver --cluster YourClusterNameHere --service-account-role-arn arn:aws:iam::$(aws sts get-caller-identity --query Account --output text):role/AmazonEKS_EBS_CSI_DriverRole --force
+- Multiple AWS resources are over provisioned. We have put together a list of over provisioned resoureces. 
+- Multiple unused resources are running over the weekend and during off hours. 
 
-https://github.com/smarigowda/k8s_course_richard_chesterwood.git
+The possible pending solutions to address these issues are as follows;
 
-function prop {
-    /usr/local/bin/aws secretsmanager get-secret-value --secret-id $1
-}
+- To adjust instance sizes and numbers to match workload requirements and avoid over provisioning in the lower environments. 
+- Schedule the shutting down of resources over the weekends and possibly during off hours for non production environments.
 
-echo "Removing export directory ${EXPORT_DIR}"
-rm -rf ${EXPORT_DIR}
+We have already implemented the following:
 
-echo "Creating cdt directory ${EXPORT_DIR}"
-mkdir -p ${EXPORT_DIR}
-
-read -p "Select the MC that needs to be exported (1-MC1, 2-MC2, 0-exit)? " -n 1 -r
-echo ""
-if [[ $REPLY =~ ^[1]$ ]]
-then
-        echo "$(prop acm1-omsrds-secrete01)"
-
-        echo "Executing ${SSFS_DIR}/bin/cdtshell.sh -Dserver_name=export_mc -Source LULU_MC1 -Target DEFAULTXMLDB -DefaultXMLDir $EXPORT_DIR -DoNotSynchronize N -SourcePassword $PASS"
-        ${SSFS_DIR}/bin/cdtshell.sh -Dserver_name=export_mc -Source LULU_MC1 -Target DEFAULTXMLDB -DefaultXMLDir $EXPORT_DIR -DoNotSynchronize N-SourcePassword $PASS
-elif [[ $REPLY =~ ^[2]$ ]]
-then
-        echo "$(prop acm2-omsrds-secrete01)"
-        echo "Executing ${SSFS_DIR}/bin/cdtshell.sh -Dserver_name=export_mc -Source LULU_MC2 -Target DEFAULTXMLDB -DefaultXMLDir $EXPORT_DIR -DoNotSynchronize N -SourcePassword $PASS"
-        ${SSFS_DIR}/bin/cdtshell.sh -Dserver_name=export_mc -Source LULU_MC2 -Target DEFAULTXMLDB -DefaultXMLDir $EXPORT_DIR -DoNotSynchronize N-SourcePassword $PASS
-else
-  echo "cdtshell not executed"
-fi
-
-echo "Changing to cdt directory"
-cd ${EXPORT_DIR}/..
-tar -czvf mc_config.tar.gz .
-
-/usr/local/bin/aws s3api put-object --bucket $S3_BUCKET --key $S3_DIR/mc_config.tar.gz --body mc_config.tar.gz --acl bucket-owner-full-control
-
-echo "Removing cdt dir ${EXPORT_DIR}"
-rm -rf ${EXPORT_DIR}
-
-echo "mc config exported to s3 $S3_BUCKET/$S3_DIR"
+- Reviewed the lower environments and cleaned up all unused servers. 
+- Reduced the number of servers in each server category to the minimum. 
