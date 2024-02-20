@@ -1,24 +1,23 @@
-Cost optimization review summary 
 
-After reviewing the AWS resources currently in use, we observed the following. 
+Cost Optimization Review Summary
 
-- Multiple AWS resources are over provisioned. We have put together a list of over provisioned resources. 
-- Multiple unused resources are running over the weekend and during off hours. 
+Upon examining the current AWS resources, several areas for improvement have been identified:
 
-The possible pending solutions to address these issues are as follows;
+Over-provisioning of multiple AWS resources has been noted, and a detailed list of these over-provisioned resources has been compiled.
+Several unused resources are active during weekends and off-hours, leading to unnecessary costs.
+To address these issues, the following solutions are proposed:
 
-- To adjust instance sizes and numbers to match workload requirements and avoid over provisioning in the lower environments. 
-- Schedule the shutting down and termination of resources over the weekends and possibly during off hours for non production environments.
+Adjust instance sizes and quantities to align with workload demands, particularly in lower environments, to mitigate over-provisioning.
+Implement scheduled shutdowns and resource terminations during weekends and off-hours for non-production environments.
+In pursuit of cost optimization, the following actions have already been taken:
 
-In line with the cost optimization effort, we have already implemented the following:
+Lower environment reviews have been conducted, resulting in the cleanup of all unused servers.
+The number of servers in each category has been reduced to the minimum required.
+Financial Implications:
 
-- Reviewed the lower environments and cleaned up all unused servers. 
-- Reduced the number of servers in each server category to the minimum. 
+Upon implementing these proposals, cost reductions are estimated to be significant across different environments, with specific impacts as follows:
 
-Financial implications:
-After reviewing the above proposals, we estimate that implementing these proposals will reduce costs in the different environments as follows.
-Dev: 
+Dev:
 QA:
-Staging: 
-
-The review focuses on the lower environments namely DEV, QA and Stage. The production and performance environments are over provisioned on purpose. 
+Staging:
+It's important to note that the review primarily focuses on lower environments (DEV, QA, and Staging), whereas intentional over-provisioning is maintained in production and performance environments.
