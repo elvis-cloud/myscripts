@@ -1,16 +1,24 @@
-Cost optimization summary 
+Cost optimization review summary 
 
 After reviewing the AWS resources currently in use, we observed the following. 
 
-- Multiple AWS resources are over provisioned. We have put together a list of over provisioned resoureces. 
+- Multiple AWS resources are over provisioned. We have put together a list of over provisioned resources. 
 - Multiple unused resources are running over the weekend and during off hours. 
 
 The possible pending solutions to address these issues are as follows;
 
 - To adjust instance sizes and numbers to match workload requirements and avoid over provisioning in the lower environments. 
-- Schedule the shutting down of resources over the weekends and possibly during off hours for non production environments.
+- Schedule the shutting down and termination of resources over the weekends and possibly during off hours for non production environments.
 
-We have already implemented the following:
+In line with the cost optimization effort, we have already implemented the following:
 
 - Reviewed the lower environments and cleaned up all unused servers. 
 - Reduced the number of servers in each server category to the minimum. 
+
+Financial implications:
+After reviewing the above proposals, we estimate that implementing these proposals will reduce costs in the different environments as follows.
+Dev: 
+QA:
+Staging: 
+
+The review focuses on the lower environments namely DEV, QA and Stage. The production and performance environments are over provisioned on purpose. 
