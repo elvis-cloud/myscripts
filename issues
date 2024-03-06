@@ -1,23 +1,17 @@
-
-Cost Optimization Review Summary
-
-Upon examining the current AWS resources, several areas for improvement have been identified:
-
-Over-provisioning of multiple AWS resources has been noted, and a detailed list of these over-provisioned resources has been compiled.
-Several unused resources are active during weekends and off-hours, leading to unnecessary costs.
-To address these issues, the following solutions are proposed:
-
-Adjust instance sizes and quantities to align with workload demands, particularly in lower environments, to mitigate over-provisioning.
-Implement scheduled shutdowns and resource terminations during weekends and off-hours for non-production environments.
-In pursuit of cost optimization, the following actions have already been taken:
-
-Lower environment reviews have been conducted, resulting in the cleanup of all unused servers.
-The number of servers in each category has been reduced to the minimum required.
-Financial Implications:
-
-Upon implementing these proposals, cost reductions are estimated to be significant across different environments, with specific impacts as follows:
-
-Dev:
-QA:
-Staging:
-It's important to note that the review primarily focuses on lower environments (DEV, QA, and Staging), whereas intentional over-provisioning is maintained in production and performance environments.
+<Mar 6, 2024 12:21:27,064 PM PST> <Error> <Deployer> <BEA-149265> <Failure occurred in the execution of deployment request with ID "4562838064819009" for task "18" on [partition-name: DOMAIN]. Error is: "weblogic.application.ModuleException: java.lang.ClassNotFoundException: com.sterlingcommerce.sic.servlet.SICLocaleSettingFilter"
+weblogic.application.ModuleException: java.lang.ClassNotFoundException: com.sterlingcommerce.sic.servlet.SICLocaleSettingFilter
+        at weblogic.application.internal.ExtensibleModuleWrapper.start(ExtensibleModuleWrapper.java:140)
+        at weblogic.application.internal.flow.ModuleListenerInvoker.start(ModuleListenerInvoker.java:124)
+        at weblogic.application.internal.flow.ModuleStateDriver$3.next(ModuleStateDriver.java:233)
+        at weblogic.application.internal.flow.ModuleStateDriver$3.next(ModuleStateDriver.java:228)
+        at weblogic.application.utils.StateMachineDriver.nextState(StateMachineDriver.java:45)
+        Truncated.
+Caused By: java.lang.ClassNotFoundException: com.sterlingcommerce.sic.servlet.SICLocaleSettingFilter
+        at weblogic.utils.classloaders.GenericClassLoader.findLocalClass(GenericClassLoader.java:1029)
+        at weblogic.utils.classloaders.GenericClassLoader.findClass(GenericClassLoader.java:990)
+        at weblogic.utils.classloaders.ChangeAwareClassLoader.findClass(ChangeAwareClassLoader.java:101)
+        at weblogic.utils.classloaders.GenericClassLoader.doFindClass(GenericClassLoader.java:611)
+        at weblogic.utils.classloaders.GenericClassLoader.loadClass(GenericClassLoader.java:543)
+        Truncated.
+>
+<Mar 6, 2024 12:21:27,099 PM PST> <Error> <Deployer> <BEA-149202> <Encountered an exception while attempting to commit the 1 task for the application "smcfs_others" on [partition-name: DOMAIN].>
