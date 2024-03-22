@@ -1,1 +1,37 @@
 
+2024-03-21 09:58:40,557:INFO   :Thread-8: YCMSearchIndexCacheManager shutdown hook invoked             [system]: [ ]: YCMSearchIndexCacheManager
+2024-03-21 09:58:40,557:INFO   :Thread-8: Closing IndexReaders                                         [system]: [ ]: YCMSearchIndexCacheManager
+2024-03-21 09:58:40,562:INFO   :Thread-15: Shutting down file tracker                                   [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,563:INFO   :Thread-15: Successfully shut down file tracker                          [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,563:INFO   :Thread-15: Terminating the messaging context                            [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,563:WARN   :Thread-15: Shutting down the ServiceContext                             [system]: [ ]: ServiceContextBase       
+2024-03-21 09:58:40,564:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,572:INFO   :Thread-15: Successfully Stopped Service[0] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,572:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,579:INFO   :Thread-15: Successfully Stopped Service[1] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,580:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,587:INFO   :Thread-15: Successfully Stopped Service[2] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,587:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,593:INFO   :Thread-15: Successfully Stopped Service[3] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,594:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,599:INFO   :Thread-15: Successfully Stopped Service[4] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,599:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,606:INFO   :Thread-15: Successfully Stopped Service[5] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,606:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,614:INFO   :Thread-15: Successfully Stopped Service[6] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,614:INFO   :Thread-15: Stopping JMS consumer for subFlow [LuluReleaseOrderOnScheduleAsync_0] in Flow [LuluReleaseOrderOnScheduleAsync] [system]: [ ]: JMSConsumer              
+2024-03-21 09:58:40,620:INFO   :Thread-15: Successfully Stopped Service[7] For RuntimeId: LuluReleaseOrderOnScheduleAsync_0 [system]: [ ]: ServiceContextMediatorBase
+2024-03-21 09:58:40,620:WARN   :Thread-15: Successfully shutdown the ServiceContext                     [system]: [ ]: ServiceContextBase       
+2024-03-21 09:58:40,620:INFO   :Thread-15: Successfully terminated the messaging context                [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,620:INFO   :Thread-15: Terminating the error context                                [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,620:INFO   :Thread-15: Shutting down the error context                              [system]: [ ]: ErrorContext             
+2024-03-21 09:58:40,620:INFO   :Thread-15: Stopping the Error Consumer service                          [system]: [ ]: ErrorContextMediator     
+2024-03-21 09:58:40,620:INFO   :Thread-15: Waiting for the consumer thread to fall off                  [system]: [ ]: ErrorDispatchConsumer    
+2024-03-21 09:58:40,621:INFO   :Thread-15: consumer thread has fallen off gracefully                    [system]: [ ]: ErrorDispatchConsumer    
+2024-03-21 09:58:40,621:INFO   :Thread-15: Stopping the Error Updater service                           [system]: [ ]: ErrorContextMediator     
+2024-03-21 09:58:40,621:INFO   :Thread-15: Finished shutting down the error context                     [system]: [ ]: ErrorContext             
+2024-03-21 09:58:40,621:INFO   :Thread-15: Successfully terminated the error context                    [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,621:INFO   :Thread-15: Shutting down the scheduler thread                           [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,621:INFO   :Thread-15: Scheduler has been successfully cancelled                    [system]: [ ]: AdminScheduler           
+2024-03-21 09:58:40,621:INFO   :Thread-15: Unregister successful                                        [system]: [ ]: YFCRemoteManager         
+2024-03-21 09:58:40,635:INFO   :Thread-15: Heartbeat entries updated to 01                              [system]: [ ]: AdminScheduler 
