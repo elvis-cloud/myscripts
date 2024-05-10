@@ -65,3 +65,5 @@ done
 #cd $ARCHIVE
 #find -name *$RETENTION_DATE* -delete
 
+./archive-logs.sh: line 15: [: <=: binary operator expected
+./archive-logs.sh: line 15: [: <=: binary operator expected
