@@ -65,6 +65,28 @@ done
 #cd $ARCHIVE
 #find -name *$RETENTION_DATE* -delete
 
+#!/bin/bash
 
-./archive-logs.sh: line 15: [: <=: binary operator expected
-./archive-logs.sh: line 15: [: <=: binary operator expected
+LOGS=/opt/ssfs/runtime/logs
+ARCHIVE=$LOGS/archive
+CURRENT_MONTH=$(date +%m)
+MAX_RETENTION=90
+RETENTION_DATE=$(date +%s -d "$MAX_RETENTION days ago")
+YESTERDAY_DATE=$(date +%s -d "1 day ago")
+#mkdir -p $ARCHIVE
+#mkdir -p $ARCHIVE/$CURRENT_MONTH
+
+for i in "$LOGS"/*[0-9]; do
+    n=$(basename "$i")
+    FILE_LAST_MOD_DATE=$(date +%s -r "$LOGS/$n")
+    if [[ "$FILE_LAST_MOD_DATE" -le "$YESTERDAY_DATE" ]]; then
+        tar czf "$ARCHIVE/$CURRENT_MONTH/$n.tgz" "$LOGS/$n"
+        #echo "$LOGS/$n"
+        rm "$LOGS/$n"
+    fi
+done
+
+# archive
+# find older than MAX_RETENTIONTIME
+#cd $ARCHIVE
+#find -name *$RETENTION_DATE* -delete
