@@ -208,3 +208,6 @@ java.lang.NullPointerException
         at weblogic.work.ExecuteThread.execute(ExecuteThread.java:420)
         at weblogic.work.ExecuteThread.run(ExecuteThread.java:360)
 >
+
+
+The log errors you're encountering in the WebLogic server indicate issues with user-defined filters in the web.xml file. Specifically, the com.sterlingcommerce.ui.web.platform.filters.SCUIHttpSecurityFilter and com.yantra.yfs.ui.backend.YFSUIHttpSecurityFilter are causing NullPointerException errors. 
