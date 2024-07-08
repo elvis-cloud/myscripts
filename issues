@@ -17,3 +17,39 @@ info @esbuild/win32-ia32@0.17.8: The CPU architecture "x64" is incompatible with
 info @esbuild/darwin-x64@0.17.8: The platform "linux" is incompatible with this module.
 info "@esbuild/darwin-x64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
 info @esbuild/android-arm@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/android-arm@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/android-arm@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info @esbuild/freebsd-x64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/freebsd-x64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/android-x64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/android-x64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/linux-arm64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info "@esbuild/linux-arm64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/linux-ppc64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info "@esbuild/linux-ppc64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/openbsd-x64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/openbsd-x64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/win32-arm64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/win32-arm64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/win32-arm64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info @esbuild/linux-s390x@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info "@esbuild/linux-s390x@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/darwin-arm64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/darwin-arm64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/darwin-arm64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info @esbuild/android-arm64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/android-arm64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/android-arm64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info @esbuild/freebsd-arm64@0.17.8: The platform "linux" is incompatible with this module.
+info "@esbuild/freebsd-arm64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/freebsd-arm64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info @esbuild/linux-loong64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info "@esbuild/linux-loong64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/linux-riscv64@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info "@esbuild/linux-riscv64@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+info @esbuild/linux-mips64el@0.17.8: The CPU architecture "x64" is incompatible with this module.
+info "@esbuild/linux-mips64el@0.17.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+error glob@10.4.3: The engine "node" is incompatible with this module. Expected version ">=18". Got "16.14.0"
+info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+error Found incompatible module.
+error Command failed with exit code 1.
