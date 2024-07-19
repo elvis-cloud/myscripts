@@ -1,2 +1,31 @@
 Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Cannot assign requested address (Address not available)
  
+The error message "Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Cannot assign requested address (Address not available)" indicates that there is an issue with the network configuration or connectivity. Specifically, it means that the application cannot route to the specified host address because the network cannot find a route to the destination.
+
+Here are a few steps to troubleshoot and resolve this issue:
+
+1. **Check Network Connectivity:**
+   - Ensure that your machine has network access.
+   - Check if you can reach the destination server by using tools like `ping` or `traceroute`.
+
+2. **Verify DNS Configuration:**
+   - Ensure that the hostname you are trying to reach can be resolved to an IP address.
+   - You can test this by using the `nslookup` or `dig` command.
+
+3. **Check Firewall and Security Settings:**
+   - Ensure that there are no firewall rules blocking the connection.
+   - Check any security groups, VPNs, or proxy settings that might interfere with the network connection.
+
+4. **Verify Application Configuration:**
+   - Ensure that the correct host address and port are specified in the application configuration.
+   - Check for any typos or incorrect values in the configuration files.
+
+5. **Inspect Network Interface Configuration:**
+   - Ensure that your network interfaces are correctly configured and active.
+   - Check the IP address assigned to your network interfaces and ensure they are correct.
+
+6. **Restart Network Services:**
+   - Restart the network services on your machine to reset the network configuration.
+   - This can sometimes resolve temporary network issues.
+
+If you provide more details about your setup, I can give more specific advice on resolving this issue.
