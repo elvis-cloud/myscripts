@@ -1,3 +1,26 @@
-Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Cannot assign requested address (Address not available)
- 
-The error message "Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Cannot assign requested address (Address not available)" indicates that there is an issue with the network configuration or connectivity. Specifically, it means that the application cannot route to the specified host address because the network cannot find a route to the destination.
+<Jul 22, 2024 7:13:40,292 PM PDT> <Error> <Deployer> <BEA-149265> <Failure occurred in the execution of deployment request with ID "2762187499057916" for task "35" on [partition-name: DOMAIN]. Error is: "weblogic.management.DeploymentException: java.util.zip.ZipException: ZIP_Read: error reading zip file"
+weblogic.management.DeploymentException: java.util.zip.ZipException: ZIP_Read: error reading zip file
+	at weblogic.application.internal.flow.EarClassLoaderFlow.prepare(EarClassLoaderFlow.java:55)
+	at weblogic.application.internal.BaseDeployment$1.next(BaseDeployment.java:729)
+	at weblogic.application.utils.StateMachineDriver.nextState(StateMachineDriver.java:45)
+	at weblogic.application.internal.BaseDeployment.prepare(BaseDeployment.java:241)
+	at weblogic.application.internal.EarDeployment.prepare(EarDeployment.java:66)
+	Truncated.
+Caused By: java.util.zip.ZipException: ZIP_Read: error reading zip file
+	at java.util.zip.ZipFile.read(Native Method)
+	at java.util.zip.ZipFile.access$1400(ZipFile.java:60)
+	at java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:735)
+	at java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:435)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+	Truncated.
+> 
+[dd.trace 2024-07-22 20:13:20:308 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"44fb07b8-741a-4e3c-8ee5-8d3a84a55aab","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-22 21:13:21:494 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"dd8f31a2-34fd-4fd6-98d8-e3b7539ea78e","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-22 22:13:21:519 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"0136d258-b132-4758-81ba-0c9849fdb4f1","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-22 23:13:22:718 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"1a434d59-c294-4b9d-9779-d5875f5b4d16","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-23 00:13:23:505 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"871e274c-833e-44dc-bda0-5a7c18a1f1fa","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-23 01:13:23:910 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"fc7f50f4-6fcc-489e-a89b-752d1860f73d","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-23 02:13:25:110 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"fe95973d-3145-4c35-b64c-645b6f9427ce","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-23 03:13:25:503 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"a7d0107b-00c4-4f1a-8b7b-a99bda60f2ac","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-23 04:13:26:318 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"73d1061c-4f29-4f88-a20a-b70dad796738","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
+[dd.trace 2024-07-23 05:13:27:521 -0700] [OkHttp http://localhost:8126/...] WARN com.datadog.debugger.uploader.BatchUploader - Failed to upload batch: unexpected response code Forbidden 403 {"request_id":"638a28a8-4984-46e3-b607-c9164d24efac","errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]} (Will not log warnings for 5 minutes)
