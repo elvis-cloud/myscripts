@@ -55,3 +55,5 @@ WARNING!!! Pool maximum size exceeded 2107 times in 300000(ms).   Consider incre
 WARNING!!! Pool maximum size exceeded 2107 times in 300000(ms).   Consider increasing MaxSize on pool: oraclePool
 WARNING!!! Pool maximum size exceeded 3065 times in 300000(ms).   Consider increasing MaxSize on pool: oraclePool
 WARNING!!! Pool maximum size exceeded 3065 times in 300000(ms).   Consider increasing MaxSize on pool: oraclePool
+
+=IFERROR(MID(A1,FIND("exceeded",A1)+9,FIND("times",A1)-FIND("exceeded",A1)-10),"")
