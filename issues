@@ -12,3 +12,9 @@ then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
+
+# Ensure /usr/local/bin is included in PATH
+if ! [[ "$PATH" =~ "/usr/local/bin" ]]
+then
+    PATH="/usr/local/bin:$PATH"
+fi
