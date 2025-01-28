@@ -1,8 +1,17 @@
-I recommend implementing Oracle Enterprise Manager (OEM) to enhance monitoring of our WebLogic servers and Oracle database. OEM provides comprehensive performance monitoring, diagnostics, and management capabilities tailored for Oracle technologies.
+Skills
+Throughout this assignment, I have acquired several valuable skills that have proven essential in my current role:
 
-Key benefits include:
+Customer service and communication skills: These skills have enabled me to effectively interact with the client during daily stand-ups and throughout the day. Understanding and prioritizing their needs has been instrumental in delivering value.
 
-WebLogic Monitoring: Real-time insights into WebLogic server performance, thread pools, and JVM health.
-Database Monitoring: Proactive detection of performance bottlenecks and resource issues for optimized database operations.
-Centralized Management: Unified dashboard to monitor both WebLogic and the database, reducing complexity and improving operational efficiency.
-Automation: Automated alerts and diagnostic reports for quicker issue resolution.
+WebLogic administration skills: By developing expertise in WebLogic administration, I have been able to assist the client in resolving recurring issues related to failed deployments and troubleshooting environment outages.
+
+Infrastructure as code skills (Terraform): Through this assignment, I have gained a comprehensive understanding of Terraform and its application within the client's infrastructure. This knowledge has facilitated my ability to assist the client in making changes to their cloud infrastructure while maintaining an accurate record of its state.
+
+Focus areas
+To further foster my growth and development, I have identified the following actions to be taken:
+
+Expand knowledge in version control: I am currently pursuing training in GitLab as the client has decided to migrate to it. 
+
+Deepen understanding of observability tools: To better support the client, I plan to enhance my knowledge and understanding of DataDog and Splunk which are the main monitoring tools.
+
+Develop an understanding of EKS as the client plans to migrate some of their solutions to this service.
