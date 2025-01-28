@@ -1,23 +1,20 @@
-Business outcomes
-Throughout this period, I have focused on meeting key expectations while expanding my involvement with the infrastructure team. 
-I have consistently provided prompt responses and solutions to level 2 tasks, such as deployments and environment outages. 
-Additionally, I play a crucial role in closely monitoring the infrastructure on a daily basis and during peak sales, which is vital for the client's operations. 
-By engaging with the client, I helped develop solutions for recurring issues and collaborated on creating knowledge base articles to streamline the resolution of repetitive issues.
+Business Outcomes
+I consistently provided timely responses and effective solutions to Level 2 tasks, including deployments and resolving environment outages.
+My role involved monitoring infrastructure daily and during peak sales periods, which is critical to the client's operations.
+I actively collaborated with the client to develop solutions for recurring issues and contributed to creating knowledge base articles, streamlining the resolution process for repetitive challenges.
 
-Skills
-Throughout this assignment, I have acquired several valuable skills that have proven essential in my current role:
+Skills Development
+Customer Service and Communication: I developed strong communication skills, enabling me to effectively engage with the client during daily stand-ups and throughout the workday. Understanding and prioritizing their needs have been central to delivering value.
 
-Customer service and communication skills: These skills have enabled me to effectively interact with the client during daily stand-ups and throughout the day. Understanding and prioritizing their needs has been instrumental in delivering value.
+WebLogic Administration: Gaining expertise in WebLogic administration allowed me to resolve recurring issues such as failed deployments and troubleshoot environment outages effectively.
 
-WebLogic administration skills: By developing expertise in WebLogic administration, I have been able to assist the client in resolving recurring issues related to failed deployments and troubleshooting environment outages.
+Infrastructure as Code: I acquired in-depth knowledge of Terraform, which helped me assist the client in implementing changes to their cloud infrastructure while ensuring accurate state management.
 
-Infrastructure as code skills (Terraform): Through this assignment, I have gained a comprehensive understanding of Terraform and its application within the client's infrastructure. This knowledge has facilitated my ability to assist the client in making changes to their cloud infrastructure while maintaining an accurate record of its state.
+Focus Areas for Growth
+To continue my development and deliver even greater value to the client, I have identified the following focus areas:
 
-Focus areas
-To further foster my growth and development, I have identified the following actions to be taken:
+Version Control Systems: I am pursuing training in GitLab as the client transitions to this tool as a key component of their CI/CD processes.
 
-Expand knowledge in version control: I am currently pursuing training in GitLab as the client has decided to migrate to it. 
+Observability Tools: Enhancing my knowledge of DataDog and Splunk will allow me to better support the client in monitoring and troubleshooting.
 
-Deepen understanding of observability tools: To better support the client, I plan to enhance my knowledge and understanding of DataDog and Splunk which are the main monitoring tools.
-
-Develop an understanding of EKS as the client plans to migrate some of their solutions to this service.
+Amazon EKS: Developing a solid understanding of Amazon Elastic Kubernetes Service (EKS) is crucial as the client plans to migrate some solutions to this platform.
