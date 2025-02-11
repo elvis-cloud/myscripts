@@ -1,3 +1,7 @@
 [stdout]Feb-11-2025#15:29:01.549687: Copy /usr/share/nginx/html/ext/call-center/icc_extensions.zip to s3://oms-install/artifacts/stg1/build_artifacts/icc_extensions.zip
 [stderr]
 [stderr]Error parsing parameter '--body': Blob values must be a path to a file.
+
+ARTIFACT_NAME=icc_extensions.zip
+echo_log "Copy $ICC_FILE/$ARTIFACT_NAME to $S3_URL_APP/$ENV/build_artifacts/$ARTIFACT_NAME"
+aws s3api put-object --bucket $S3_BUCKET --key artifacts/"$ENV"/build_artifacts/$ARTIFACT_NAME --body $ICC_FILE/$ARTIFACT_NAME --acl bucket-owner-full-control
