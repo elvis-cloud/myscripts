@@ -32,3 +32,6 @@ java.lang.OutOfMemoryError: GC overhead limit exceeded
 java.lang.OutOfMemoryError: GC overhead limit exceeded
 Yantra encountered Java Virtual Machine Error at 2025-02-20 13:22:14.242 , verify your JVM settings......
 Halting the system................
+
+
+-Xms512m -Xmx4g -XX:+UseG1GC -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/path/to/dump/
