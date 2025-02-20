@@ -1,7 +1,34 @@
-[stdout]Feb-11-2025#15:29:01.549687: Copy /usr/share/nginx/html/ext/call-center/icc_extensions.zip to s3://oms-install/artifacts/stg1/build_artifacts/icc_extensions.zip
-[stderr]
-[stderr]Error parsing parameter '--body': Blob values must be a path to a file.
-
-ARTIFACT_NAME=icc_extensions.zip
-echo_log "Copy $ICC_FILE/$ARTIFACT_NAME to $S3_URL_APP/$ENV/build_artifacts/$ARTIFACT_NAME"
-aws s3api put-object --bucket $S3_BUCKET --key artifacts/"$ENV"/build_artifacts/$ARTIFACT_NAME --body $ICC_FILE/$ARTIFACT_NAME --acl bucket-owner-full-control
+Exception in thread "Thread-39_PublishInvAvailabilityToEMSAsync_0" java.lang.OutOfMemoryError: Java heap space
+        at java.util.Arrays.copyOfRange(Arrays.java:3664)
+        at java.lang.String.<init>(String.java:207)
+        at java.lang.String.substring(String.java:1969)
+        at java.lang.String.trim(String.java:2878)
+        at com.yantra.yfc.util.YFCCommon.isStringVoid(YFCCommon.java:641)
+        at com.yantra.yfc.util.AppContextInfoUtil.getAppContextInfoElemFromServiceMessage(AppContextInfoUtil.java:298)
+        at com.yantra.yfc.util.AppContextInfoUtil.setAppContextInfoFromServiceMessage(AppContextInfoUtil.java:204)
+        at com.yantra.integration.adapter.FlowExecutor.execute(FlowExecutor.java:193)
+        at com.yantra.integration.adapter.IntegrationAdapter.onMessage(IntegrationAdapter.java:458)
+        at com.yantra.interop.services.jms.JMSContextMediator.processMessage(JMSContextMediator.java:102)
+        at com.yantra.interop.services.jms.JMSConsumer.onMessage(JMSConsumer.java:174)
+        at com.yantra.interop.services.jms.JMSConsumer.run(JMSConsumer.java:387)
+        at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-22_PublishInvAvailabilityToEMSAsync_0" java.lang.OutOfMemoryError: Java heap space
+        at java.util.Arrays.copyOfRange(Arrays.java:3664)
+        at java.lang.String.<init>(String.java:207)
+        at weblogic.utils.StringUtils$StringMaker.getString(StringUtils.java:640)
+        at weblogic.utils.StringUtils.getString(StringUtils.java:635)
+        at weblogic.utils.io.ChunkedDataInputStream.readUTF8(ChunkedDataInputStream.java:372)
+        at weblogic.jms.common.PayloadChunkBase.readUTF8(PayloadChunkBase.java:106)
+        at weblogic.jms.common.TextMessageImpl.getText(TextMessageImpl.java:109)
+        at com.yantra.interop.services.jms.MessageUtil.createServiceMessage(MessageUtil.java:67)
+        at com.yantra.interop.services.jms.MessageUtil.createServiceMessage(MessageUtil.java:55)
+        at com.yantra.interop.services.jms.JMSConsumer.onMessage(JMSConsumer.java:173)
+        at com.yantra.interop.services.jms.JMSConsumer.run(JMSConsumer.java:387)
+        at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-33_PublishInvAvailabilityToEMSAsync_0" Exception in thread "Thread-29_PublishInvAvailabilityToEMSAsync_0" Exception in thread "Thread-31_PublishInvAvailabilityToEMSAsync_0" Exception in thread "Thread-25_PublishInvAvailabilityToEMSAsync_0" java.lang.OutOfMemoryError: GC overhead limit exceeded
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+Yantra encountered Java Virtual Machine Error at 2025-02-20 13:22:14.242 , verify your JVM settings......
+Halting the system................
