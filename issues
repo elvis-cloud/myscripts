@@ -1,31 +1,3 @@
--Xms512m -Xmx4g -XX:+UseG1GC -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/path/to/dump/
-
-What is an ipv4 address? what is a router and what is a switch. how do both use ipv4 addresses?
-What is an ip address, a subnet mask, a default gateway and dns and how do they inter-relate within a network?
-Network id vs host id. 
-
-What is a mac address and how do they relate to ipv4?
-cmd
-getmac
-getmac /v
-ipconfig /all
-ipconfig /all|findstr "Description Physical Address" 
-
-PowerShell
-Get-NetAdapter
-Get-NetAdapter|format-list
-
-What is arp and how does it work with devices on the same network vs devices on different networks? Give examples using commands. 
-ARP -a
-arp -d
-ping 
-Route Print
-Get-NetRoute
-
-What is a vlan
-
-What is the difference between layer 2 and layer 3 switches?
-
 Describe binary code as it relates to ip addressing. How do you convert from decimal to binary code and back?
 
 What are the different classes of IP addresses? How are they determined? What are they used for?
