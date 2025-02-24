@@ -1,37 +1,38 @@
-Exception in thread "Thread-39_PublishInvAvailabilityToEMSAsync_0" java.lang.OutOfMemoryError: Java heap space
-        at java.util.Arrays.copyOfRange(Arrays.java:3664)
-        at java.lang.String.<init>(String.java:207)
-        at java.lang.String.substring(String.java:1969)
-        at java.lang.String.trim(String.java:2878)
-        at com.yantra.yfc.util.YFCCommon.isStringVoid(YFCCommon.java:641)
-        at com.yantra.yfc.util.AppContextInfoUtil.getAppContextInfoElemFromServiceMessage(AppContextInfoUtil.java:298)
-        at com.yantra.yfc.util.AppContextInfoUtil.setAppContextInfoFromServiceMessage(AppContextInfoUtil.java:204)
-        at com.yantra.integration.adapter.FlowExecutor.execute(FlowExecutor.java:193)
-        at com.yantra.integration.adapter.IntegrationAdapter.onMessage(IntegrationAdapter.java:458)
-        at com.yantra.interop.services.jms.JMSContextMediator.processMessage(JMSContextMediator.java:102)
-        at com.yantra.interop.services.jms.JMSConsumer.onMessage(JMSConsumer.java:174)
-        at com.yantra.interop.services.jms.JMSConsumer.run(JMSConsumer.java:387)
-        at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-22_PublishInvAvailabilityToEMSAsync_0" java.lang.OutOfMemoryError: Java heap space
-        at java.util.Arrays.copyOfRange(Arrays.java:3664)
-        at java.lang.String.<init>(String.java:207)
-        at weblogic.utils.StringUtils$StringMaker.getString(StringUtils.java:640)
-        at weblogic.utils.StringUtils.getString(StringUtils.java:635)
-        at weblogic.utils.io.ChunkedDataInputStream.readUTF8(ChunkedDataInputStream.java:372)
-        at weblogic.jms.common.PayloadChunkBase.readUTF8(PayloadChunkBase.java:106)
-        at weblogic.jms.common.TextMessageImpl.getText(TextMessageImpl.java:109)
-        at com.yantra.interop.services.jms.MessageUtil.createServiceMessage(MessageUtil.java:67)
-        at com.yantra.interop.services.jms.MessageUtil.createServiceMessage(MessageUtil.java:55)
-        at com.yantra.interop.services.jms.JMSConsumer.onMessage(JMSConsumer.java:173)
-        at com.yantra.interop.services.jms.JMSConsumer.run(JMSConsumer.java:387)
-        at java.lang.Thread.run(Thread.java:748)
-Exception in thread "Thread-33_PublishInvAvailabilityToEMSAsync_0" Exception in thread "Thread-29_PublishInvAvailabilityToEMSAsync_0" Exception in thread "Thread-31_PublishInvAvailabilityToEMSAsync_0" Exception in thread "Thread-25_PublishInvAvailabilityToEMSAsync_0" java.lang.OutOfMemoryError: GC overhead limit exceeded
-java.lang.OutOfMemoryError: GC overhead limit exceeded
-java.lang.OutOfMemoryError: GC overhead limit exceeded
-java.lang.OutOfMemoryError: GC overhead limit exceeded
-java.lang.OutOfMemoryError: GC overhead limit exceeded
-Yantra encountered Java Virtual Machine Error at 2025-02-20 13:22:14.242 , verify your JVM settings......
-Halting the system................
-
-
 -Xms512m -Xmx4g -XX:+UseG1GC -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/path/to/dump/
+
+What is an ipv4 address? what is a router and what is a switch. how do both use ipv4 addresses?
+What is an ip address, a subnet mask, a default gateway and dns and how do they inter-relate within a network?
+Network id vs host id. 
+
+What is a mac address and how do they relate to ipv4?
+cmd
+getmac
+getmac /v
+ipconfig /all
+ipconfig /all|findstr "Description Physical Address" 
+
+PowerShell
+Get-NetAdapter
+Get-NetAdapter|format-list
+
+What is arp and how does it work with devices on the same network vs devices on different networks? Give examples using commands. 
+ARP -a
+arp -d
+ping 
+Route Print
+Get-NetRoute
+
+What is a vlan
+
+What is the difference between layer 2 and layer 3 switches?
+
+Describe binary code as it relates to ip addressing. How do you convert from decimal to binary code and back?
+
+What are the different classes of IP addresses? How are they determined? What are they used for?
+
+What are /8 /16 and /24 networks. 
+
+Determine the number of ip addresses from the subnet mask.
+Network ID, First IP, Last IP, Broadcast
+
+Loopback address
