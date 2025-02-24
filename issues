@@ -1,10 +1,1 @@
 Describe binary code as it relates to ip addressing. How do you convert from decimal to binary code and back?
-
-What are the different classes of IP addresses? How are they determined? What are they used for?
-
-What are /8 /16 and /24 networks. 
-
-Determine the number of ip addresses from the subnet mask.
-Network ID, First IP, Last IP, Broadcast
-
-Loopback address
