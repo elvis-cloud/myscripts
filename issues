@@ -1,30 +1,16 @@
-2025-02-26 23:25:51,614:ERRORDTL:pool-2-thread-1: [1740641151610]javax.management.RuntimeMBeanException
-	at com.ibm.sterling.afc.jmx.PLTJMXInitializer.registerMBeans(PLTJMXInitializer.java:149)
-	at com.ibm.afc.jmx.PLTJMXUtils._initJmxMbeans(PLTJMXUtils.java:75)
-	at com.ibm.afc.jmx.PLTJMXUtils.access$000(PLTJMXUtils.java:31)
-	at com.ibm.afc.jmx.PLTJMXUtils$1.call(PLTJMXUtils.java:54)
-	at com.ibm.afc.jmx.PLTJMXUtils$1.call(PLTJMXUtils.java:50)
-	at com.yantra.yfc.log.LogStateWrapper.call(LogStateWrapper.java:84)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.RuntimeException: java.lang.RuntimeException: com.yantra.yfs.japi.YFSException: <?xml version="1.0" encoding="UTF-8"?>
-<Errors>
-    <Error ErrorCode="java.rmi.server.ExportException"
-        ErrorDescription="Error_description_not_available" ErrorRelatedMoreInfo="">
-        <Attribute Name="ErrorCode" Value="java.rmi.server.ExportException"/>
-        <Attribute Name="ErrorDescription" Value="Error_description_not_available"/>
-        <Error ErrorCode="java.rmi.server.ExportException"
-            ErrorDescription="" ErrorRelatedMoreInfo="Port already in use: 49889; nested exception is: &#xa;&#x9;java.net.BindException: Address already in use (Bind failed)">
-            <Stack>java.rmi.server.ExportException: Port already in use: 49889; nested exception is: 
-	java.net.BindException: Address already in use (Bind failed)
-	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:346)
-	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:254)
-	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:412)
-	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:147)
-	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:237)
-	at java.rmi.server.UnicastRemoteObject.exportObject(UnicastRemoteObject.java:383)
-	at java.rmi.server.UnicastRemoteObject.exportObject(UnicastRemoteObject.java:320)
-	at com.yantra.yfc.rmi.YFCRemoteExporter.exportObject(YFCRemoteExporter.java:246)
+if [ "${JAVA_VENDOR}" != "HP" ] ; then
+        if [ "${VM_TYPE}" = "HotSpot" ] ; then
+                WLS_MEM_ARGS_64BIT="-Xms256m -Xmx512m"
+                export WLS_MEM_ARGS_64BIT
+                WLS_MEM_ARGS_32BIT="-Xms256m -Xmx512m"
+                export WLS_MEM_ARGS_32BIT
+        fi
+fi
+
+
+MEM_ARGS_64BIT="${WLS_MEM_ARGS_64BIT}"
+export MEM_ARGS_64BIT
+
+MEM_ARGS_32BIT="${WLS_MEM_ARGS_32BIT}"
+export MEM_ARGS_32BIT
 
