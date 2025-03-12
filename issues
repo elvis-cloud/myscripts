@@ -1,16 +1,15 @@
 if [ "${JAVA_VENDOR}" != "HP" ] ; then
-        if [ "${VM_TYPE}" = "HotSpot" ] ; then
-                WLS_MEM_ARGS_64BIT="-Xms256m -Xmx512m"
-                export WLS_MEM_ARGS_64BIT
-                WLS_MEM_ARGS_32BIT="-Xms256m -Xmx512m"
-                export WLS_MEM_ARGS_32BIT
+    if [ "${VM_TYPE}" = "HotSpot" ] ; then
+        if [ "${SERVER_NAME}" = "AdminServer" ] ; then
+            # Admin Server Memory Allocation
+            WLS_MEM_ARGS_64BIT="-Xms512m -Xmx1024m"
+            WLS_MEM_ARGS_32BIT="-Xms512m -Xmx1024m"
+        else
+            # Managed Server Memory Allocation
+            WLS_MEM_ARGS_64BIT="-Xms256m -Xmx512m"
+            WLS_MEM_ARGS_32BIT="-Xms256m -Xmx512m"
         fi
+        export WLS_MEM_ARGS_64BIT
+        export WLS_MEM_ARGS_32BIT
+    fi
 fi
-
-
-MEM_ARGS_64BIT="${WLS_MEM_ARGS_64BIT}"
-export MEM_ARGS_64BIT
-
-MEM_ARGS_32BIT="${WLS_MEM_ARGS_32BIT}"
-export MEM_ARGS_32BIT
-
