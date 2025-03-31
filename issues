@@ -1,15 +1,77 @@
-if [ "${JAVA_VENDOR}" != "HP" ] ; then
-    if [ "${VM_TYPE}" = "HotSpot" ] ; then
-        if [ "${SERVER_NAME}" = "AdminServer" ] ; then
-            # Admin Server Memory Allocation
-            WLS_MEM_ARGS_64BIT="-Xms512m -Xmx1024m"
-            WLS_MEM_ARGS_32BIT="-Xms512m -Xmx1024m"
-        else
-            # Managed Server Memory Allocation
-            WLS_MEM_ARGS_64BIT="-Xms256m -Xmx512m"
-            WLS_MEM_ARGS_32BIT="-Xms256m -Xmx512m"
-        fi
-        export WLS_MEM_ARGS_64BIT
-        export WLS_MEM_ARGS_32BIT
-    fi
-fi
+Description
+
+An effective environmental dashboard is needed for real-time data visualization, key performance indicators (KPIs), and actionable insights to monitor environmental health. Metrics related to infrastructure health, application performance, CI/CD status, and security. This allows for quick identification and resolution of issues. 
+
+The visualization of the Dashboard will be layered (minimum 2 layers) ->
+
+Primary Layer (or the first user-interface, showcasing the following -
+
+Name of the environment
+
+Reserved checkbox (Y or N: if “Y” then a short description of the usage)
+
+Infrastructure Health (can simply be kept Green, Yellow, Red or Black/Dead)
+
+Application Availability (can simply be kept Green, Yellow, Red or Black/Dead → logic can be based on the individual environments scope of usage)
+
+CI/CD Status
+
+Security Gradient 
+
+Last Alert
+
+Timer on each of these statuses.
+
+Detail Layer (or the layer hidden behind the hyperlink and show case details for individual environments)
+
+Under Reservation-
+
+If not reserved, it is available for anyone and everyone all the time. (Developers and QA shall be mindful of that and do not raise complain if the environment is consumed for the code deployment significant amount of time).
+
+If reserved, then the following shall be mandatory fields -
+
+reservation time window
+
+reason of reservation
+
+POC (in case of a release request or collaboration)
+
+Under Infra- 
+
+Resource Utilization: CPU usage, memory/disk space availability, network traffic usage for servers, containers and other infra components.
+
+Server Status: Monitor server uptime, identify failures or outages, and display alerts for critical events
+
+Database Performance: Track database connections, query latency, and storage capacity to ensure optimal database performance
+
+Under Application Performance-
+
+Application Availability: Monitor application uptime, response times, and error rates.
+
+Key Metrics: Track relevant application-specific metrics, such as transaction rates, user sessions, and database calls.
+
+Error Tracking: Identify and analyze application errors and exceptions to improve stability and performance.
+
+Under CI/CD Status-
+
+Pipeline Status: Monitor the status of CI/CD pipelines, displaying build, test, and deployment stages.
+
+Build/Test Results: Quickly assess build and test results, including failure rates and test coverage.
+
+Deployment History: Track recent deployments, their status, and any associated issues.
+
+Under Security:
+
+Vulnerability Scanning: Display results of vulnerability scans and track the remediation status of identified vulnerabilities.
+
+Authentication & Authorization: Monitor successful and failed authentication attempts, user roles, and access levels.
+
+Security Events: Track and analyze security events, such as intrusion attempts and suspicious activity.
+
+Other useful features that can also be added at individual environment level:
+
+Alerting & Notifications: Set up alerts for critical events and receive notifications via email, SMS, or other channels.
+
+Data Visualization: Use charts, graphs, and other visual representations to make it easy to understand trends and identify issues.
+
+Customization: Allow users to customize the dashboard to display the metrics and data that are most relevant to their team
