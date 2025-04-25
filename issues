@@ -4,3 +4,6 @@
    Active: failed (Result: exit-code) since Fri 2025-04-25 13:57:47 PDT; 35min ago
  Main PID: 530559 (code=exited, status=0/SUCCESS)
 [weblogic@ip-10-244-10-87 oms_app ~ dev5 ~]$
+
+nginx: [emerg] "location" directive is not allowed here in /etc/nginx/conf/orderhub/locations.conf:5
+nginx: configuration file /etc/nginx/nginx.conf test failed
