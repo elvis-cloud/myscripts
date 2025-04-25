@@ -1,1 +1,6 @@
-
+[weblogic@ip-10-244-10-87 oms_app ~ dev5 ~]$ systemctl status nginx.service
+● nginx.service - The nginx HTTP and reverse proxy server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Fri 2025-04-25 13:57:47 PDT; 35min ago
+ Main PID: 530559 (code=exited, status=0/SUCCESS)
+[weblogic@ip-10-244-10-87 oms_app ~ dev5 ~]$
