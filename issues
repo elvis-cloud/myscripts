@@ -1,1 +1,24 @@
+Initial configurations
 
+Initial Capacity: 
+Maximum Capacity: 
+Capacity Increment: 
+Statement Cache Type: 
+Statement Cache Size: 
+
+In the Advanced section
+
+Test Connections On Reserve:
+Test Frequency (seconds):
+Seconds to Trust an Idle Pool Connection:
+Shrink Frequency (seconds):
+Init SQL:
+Connection Creation Retry Frequency (seconds):
+Login Delay (seconds):
+Inactive Connection Timeout (seconds):
+Maximum Waiting for Connection (seconds):
+Connection Reserve Timeout (seconds):
+Statement Timeout:
+Ignore In-Use Connections:
+Pinned-To-Thread:
+Remove Infected Connections Enabled:
