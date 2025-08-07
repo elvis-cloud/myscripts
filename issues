@@ -1,8 +1,21 @@
-####<Jun 12, 2025 1:37:56,396 PM PDT> <Notice> <Server> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <weblogic.socket.ServerListenThread> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000e> <1749760676396> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002613> <Channel "Default[2]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.>
-####<Jun 12, 2025 1:37:56,397 PM PDT> <Notice> <Server> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <weblogic.socket.ServerListenThread> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000e> <1749760676397> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002613> <Channel "Default" is now listening on 10.240.99.69:7001 for protocols iiop, t3, ldap, snmp, http.>
-####<Jun 12, 2025 1:37:56,397 PM PDT> <Notice> <Server> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <weblogic.socket.ServerListenThread> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000e> <1749760676397> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002613> <Channel "Default[1]" is now listening on 0:0:0:0:0:0:0:1%lo:7001 for protocols iiop, t3, ldap, snmp, http.>
-####<Jun 12, 2025 1:37:56,397 PM PDT> <Notice> <Server> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <weblogic.socket.ServerListenThread> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000e> <1749760676397> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002613> <Channel "Default[2]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.>
-####<Jun 12, 2025 1:37:56,397 PM PDT> <Notice> <Server> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <weblogic.socket.ServerListenThread> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000e> <1749760676397> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002613> <Channel "Default" is now listening on 10.240.99.69:7001 for protocols iiop, t3, ldap, snmp, http.>
-####<Jun 12, 2025 1:37:56,398 PM PDT> <Notice> <Server> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <weblogic.socket.ServerListenThread> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000e> <1749760676398> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002613> <Channel "Default[1]" is now listening on 0:0:0:0:0:0:0:1%lo:7001 for protocols iiop, t3, ldap, snmp, http.>
-####<Jun 12, 2025 1:37:56,400 PM PDT> <Notice> <WebLogicServer> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <[ACTIVE] ExecuteThread:'0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000f> <1749760676400> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000360> <The server started in RUNNING mode.>
-####<Jun 12, 2025 1:37:56,406 PM PDT> <Notice> <WebLogicServer> <ip-10-240-99-69.acm1-oms.aws.lllint.com> <AdminServer> <[ACTIVE] ExecuteThread:'0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <fdbd94a4-7596-4d6c-94b8-9fb3e28e44c8-0000000f> <1749760676406> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000365> <Server state changed to RUNNING.>
+WebLogic Monitoring with Datadog
+We are recommending the integration of Datadog with our WebLogic servers to enhance monitoring and operational awareness.
+
+Implementation Overview
+Enable remote monitoring on WebLogic.
+
+Configure Datadog to collect key performance metrics.
+
+Set up dashboards and alerts for real-time tracking.
+
+Enable log monitoring for deeper visibility.
+
+Key Business Advantages
+1. Improved Visibility and Control
+Gain real-time insight into the health and performance of WebLogic servers. This enables better oversight and decision-making based on live data rather than assumptions or delays.
+
+2. Proactive Issue Detection
+Automated alerts will notify the team when issues begin to emerge, allowing us to take action before they impact users or systems—greatly reducing the risk of unplanned downtime.
+
+3. Faster Troubleshooting
+Having centralized metrics and logs simplifies investigations. When a problem arises, teams can quickly identify the root cause, reducing the time it takes to recover and improving service reliability.
