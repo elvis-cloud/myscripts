@@ -1,21 +1,619 @@
-WebLogic Monitoring with Datadog
-We are recommending the integration of Datadog with our WebLogic servers to enhance monitoring and operational awareness.
+#!/bin/bash
 
-Implementation Overview
-Enable remote monitoring on WebLogic.
+# wls_cicd_deploy.sh
+#IS_READINESS_TEST=TRUE
 
-Configure Datadog to collect key performance metrics.
+# Variables
+if [ ! "$IS_READINESS_TEST" = "TRUE" ]; then
+	S3_URL_ROOT=s3://oms-install
+else
+	S3_URL_ROOT=s3://weblogic-oms
+fi
+#S3_URL=s3://weblogic-oms/installation
+S3_URL=$S3_URL_ROOT/weblogic
+#S3_URL_APP=$S3_URL_ROOT/applications
+S3_URL_APP=$S3_URL_ROOT/artifacts
+S3_URL_USERDATA=$S3_URL_ROOT/userdata
+S3_URL_CERT_PRFIX=$S3_URL_ROOT/weblogic/cert
+APP_ROOT=/opt/ssfs
+APP_RUNTIME=$APP_ROOT/runtime
+APP_PROPERTIES_FOLDER=$APP_RUNTIME/properties
+ORACLE_FOLDER=/u01/app/oracle
+CONFIG_COMMON_FOLDER=$ORACLE_FOLDER/config/common
+USERDATA_FOLDER=$ORACLE_FOLDER/config/userdata
+USERDATA_COMMON_FOLDER=$ORACLE_FOLDER/config/userdata/common
+MSSERVER_NAME_PREFIX=oms_server
+MAX_NUM_SERVER_COUNT=100
+WLST_SCRIPT_FOLDER=$ORACLE_FOLDER/config/userdata/wlst
+WLST_SHELL=$ORACLE_FOLDER/product/fmw_12.2.1.4/oracle_common/common/bin/wlst.sh
+WLST_MAIN_SRC_FILE=start_wls_infra.py
+APP_DOMAIN_APPLICATIONS=$ORACLE_FOLDER/config_oms/domains/oms_app/applications
+APP_DOMAIN_APPLICATIONS_LOCAL_ROOT=/var/www
+APP_DOMAIN_APPLICATIONS_LOCAL=$APP_DOMAIN_APPLICATIONS_LOCAL_ROOT/my-temp-dir
+LOG_FILE=/u01/common/scripts/userdata.log
+JDK_SECURITY_FOLDER=/usr/java/jdk1.8.0_301-amd64/jre/lib/security
+SPLUNK_INSTALL_DIR=/opt/splunkforwarder
 
-Set up dashboards and alerts for real-time tracking.
+# App Deployment related
+INSTALL_DIR=$APP_RUNTIME
+OMS_APPLICATION=Not_Applicable
+#export ENV=$ASG_Environment # Environment
+#export SECRET_PREFIX=$PREFIX # Prefix for the secrets
 
-Enable log monitoring for deeper visibility.
+# CRON job of removing wls objects related
+RM_MINUTE=10
+RM_SERVER_COMMAND="$RM_MINUTE * * * * /usr/bin/flock -n /tmp/rws.lockfile $USERDATA_FOLDER/remove_wls_server.sh"
 
-Key Business Advantages
-1. Improved Visibility and Control
-Gain real-time insight into the health and performance of WebLogic servers. This enables better oversight and decision-making based on live data rather than assumptions or delays.
+# Control the order of the server build
+MAX_NUM_WAIT_LOOP=300
+NODE_MGR_START_TIME=90
+SLEEP_TIME=60
+LOCK_SLEEP_TIME=3
+ADMM_SVR_START_TIME=600
+CONTINUE_FLG=true
 
-2. Proactive Issue Detection
-Automated alerts will notify the team when issues begin to emerge, allowing us to take action before they impact users or systems—greatly reducing the risk of unplanned downtime.
+while getopts d:g:a: flag; do
+	case "${flag}" in
+	d) DOMAIN=${OPTARG} ;;
+	g) ASG_Group=${OPTARG} ;;
+	a) SVR_START_AGR=${OPTARG} ;;
+	*) echo Invalid argument detected: "$0" "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "${10}" ;;
+	esac
+done
+echo "Input Domain: $DOMAIN"
+echo "Input ASG Group: $ASG"
+echo "Input Server Start Argument: $SVR_START_AGR"
 
-3. Faster Troubleshooting
-Having centralized metrics and logs simplifies investigations. When a problem arises, teams can quickly identify the root cause, reducing the time it takes to recover and improving service reliability.
+echo_log() {
+	echo "$(TZ=America/New_York date +%b-%d-%Y#%T.%6N)": "$1"
+	echo "$(TZ=America/New_York date +%b-%d-%Y#%T.%6N)": "$1" >>$LOG_FILE
+}
+
+TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -sH "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+AWS_AZ=$(curl -sH "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/placement/availability-zone)
+echo_log "AWS_AZ $AWS_AZ"
+AWS_Region=${AWS_AZ::-1}
+echo_log "AWS_Region $AWS_Region"
+ASG_Group=$(aws ec2 describe-instances --instance-id $(curl -sH "X-aws-ec2-metadata-token: $TOKEN"  http://169.254.169.254/latest/meta-data/instance-id) --query 'Reservations[*].Instances[*].Tags[?Key==`ASG_Group`].Value' --region ${AWS_Region} --output text)
+echo_log "ASG_Group read from the aws cli: $ASG_Group"
+ASG_Environment=$(aws ec2 describe-instances --instance-id $(curl -sH "X-aws-ec2-metadata-token: $TOKEN"  http://169.254.169.254/latest/meta-data/instance-id) --query 'Reservations[*].Instances[*].Tags[?Key==`ASG_Environment`].Value' --region ${AWS_Region} --output text)
+ENV=$ASG_Environment
+echo_log "ASG_Environment read from the aws cli: $ASG_Environment. Set ENV as: $ENV"
+ENV_PREFIX=${ASG_Environment:0:2}
+echo_log "ENV_PREFIX: $ENV_PREFIX derived from $ASG_Environment"
+
+# Env: dev1, dev2, dev3, qa1, qa2, stg1, stg2, perf, prod
+# if [ "$ASG_Group" = "oms_app" ] || [ "$ASG_Group" = "oms_jms" ]; then [[ "$ASG_Group" == "oms_jms"* ]]
+if [[ "$ENV" == "stg"* ]] || [[ "$ENV" == "perf"* ]]; then
+	WLS_ENV_MODE=prod-like
+elif [[ "$ENV" == "prod"* ]] || [ "$ENV" == "qa3" ]; then
+	WLS_ENV_MODE=prod
+else
+	WLS_ENV_MODE=dev
+fi
+echo_log "WLS_ENV_MODE is $WLS_ENV_MODE"
+S3_CONFIG_ENV_URL=$S3_URL/config/$WLS_ENV_MODE
+echo_log "S3_CONFIG_ENV_URL is $S3_CONFIG_ENV_URL"
+
+AWS_ASG_NAME=$(aws ec2 describe-instances --instance-id $(curl -sH "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id) --query 'Reservations[*].Instances[*].Tags[?Key==`aws:autoscaling:groupName`].Value' --region ${AWS_Region} --output text)
+
+if [ -z "$AWS_ASG_NAME" ]; then
+	echo "AWS_ASG_NAME has empty value: $AWS_ASG_NAME. "
+	echo "This is a non-Terroform managed environment, or with an Admin ASG_Group, start to set the Target Group in this server"
+	AWS_ASG_NAME=$(aws ec2 describe-instances --instance-id $(curl -sH "X-aws-ec2-metadata-token: $TOKEN"  http://169.254.169.254/latest/meta-data/instance-id) --query 'Reservations[*].Instances[*].Tags[?Key==`autoscaling:groupName`].Value' --region ${AWS_Region} --output text)
+	echo "Set Target Group in this server completed. This is only used for the non-Terroform managed environment"
+fi
+
+echo_log "aws:autoscaling:groupName read from the aws cli: $AWS_ASG_NAME"
+
+#Sample aws:autoscaling:groupName AWS_ASG_NAME
+# CodeDeploy_#DeployentGroupName#_d-#Deployment Id”
+# CodeDeploy_acq3-app-cntr-deploy-app-wls2_d-HAWECA0TE (Ex: acq3-app-cntr-deploy-app-wls2 is the depl. grp name)
+# CodeDeploy_OMS_qa3_AppCntr_DeploymentGroup_d-HAWECA0TE (Ex: OMS_qa3_AppCntr_DeploymentGroup is the depl. grp name)
+# acq3-oms-app-cntr
+# CodeDeploy_acq3-oms-app-cntr_d-HAWECA0TE
+
+# Replace/remove CodeDeploy_
+AWS_ASG_NAME="${AWS_ASG_NAME/CodeDeploy_/}"
+IFS='_' read -ra AWS_ASG_NAME_CODEDEPLOY_ARR <<<"$AWS_ASG_NAME"
+AWS_ASG_NAME=${AWS_ASG_NAME_CODEDEPLOY_ARR[0]}
+
+IFS='-' read -ra AWS_ASG_NAME_ARR <<<"$AWS_ASG_NAME"
+AWS_ASG_APP_NAME=${AWS_ASG_NAME_ARR[2]}-${AWS_ASG_NAME_ARR[3]}
+AWS_ASG_APP1_NAME=${AWS_ASG_NAME_ARR[2]}
+echo_log "Application Named derived from aws:autoscaling:groupName  is : $AWS_ASG_APP_NAME"
+#App deployment related
+PREFIX=${AWS_ASG_NAME_ARR[0]}-${AWS_ASG_NAME_ARR[1]}
+SECRET_PREFIX=$PREFIX
+
+if [ "$AWS_ASG_APP_NAME" = 'app-cntr' ]; then
+	OMS_APPLICATION=smcfs_others
+elif [ "$AWS_ASG_APP_NAME" = 'n-america' ]; then
+	OMS_APPLICATION=smcfs_api
+elif [ "$AWS_ASG_APP_NAME" = 'rest-intl' ]; then
+	OMS_APPLICATION=smcfs_api
+elif [ "$AWS_ASG_APP1_NAME" = 'pps' ]; then
+	OMS_APPLICATION=isf
+elif [ "$AWS_ASG_APP_NAME" = 'app-icc' ]; then
+	OMS_APPLICATION=smcfs_icc
+else
+	OMS_APPLICATION=Not_Applicable
+fi
+
+if [ "$IS_READINESS_TEST" = "TRUE" ]; then
+	echo_log "Readiness Test: Application Deployment is not required"
+	OMS_APPLICATION=Not_Applicable
+fi
+
+echo_log "OMS Application : $OMS_APPLICATION"
+
+ip4=$(/sbin/ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
+echo_log "EC2 ip address $ip4"
+
+if [[ "$ASG_Group" == "oms_app"* ]]; then
+	DOMAIN=app
+	echo_log "Derive Domain Name as $DOMAIN from ASG Group $ASG_Group"
+elif [[ "$ASG_Group" == "oms_jms"* ]]; then
+	DOMAIN=jms
+	echo_log "Derive Domain Name as $DOMAIN from ASG Group $ASG_Group"
+else
+	echo_log "Invalid ASG Group $ASG_Group. Program exit"
+	exit 0
+fi
+
+if [ "$DOMAIN" = 'app' ]; then
+	LOG_FILE=/u01/common/scripts/userdata_app.log
+	LOCK_PROPERTIES_FILE=$USERDATA_COMMON_FOLDER/oms_app_lock.config
+else
+	LOG_FILE=/u01/common/scripts/userdata_jms.log
+	LOCK_PROPERTIES_FILE=$USERDATA_COMMON_FOLDER/oms_jms_lock.config
+fi
+echo_log "The domain lock file is $LOCK_PROPERTIES_FILE"
+
+AUTOSCALE_FOLDER=/u01/common/autoscale
+if [ $DOMAIN = 'app' ]; then
+	AS_NM_HOME=$AUTOSCALE_FOLDER/config_oms/domains/oms_app/nodemanager
+	AS_NM_PROPERTIES_FILE=$AS_NM_HOME/nodemanager.properties
+	AS_SOURCE_NM_PROPERTIES_FILE=$ORACLE_FOLDER/config_oms/domains/oms_app/nodemanager_autoscale/nodemanager.properties
+else
+	AS_NM_HOME=$AUTOSCALE_FOLDER/config_jms/domains/oms_jms/nodemanager
+	AS_NM_PROPERTIES_FILE=$AS_NM_HOME/nodemanager.properties
+	AS_SOURCE_NM_PROPERTIES_FILE=$ORACLE_FOLDER/config_jms/domains/oms_jms/nodemanager_autoscale/nodemanager.properties
+fi
+
+if [ "$ASG_Group" = "oms_jms_admin" ]; then
+	echo_log "This is OMS JMS Admin Server"
+fi
+
+if [ ! "$ASG_Group" = "oms_jms_admin" ]; then
+	echo_log "This is $ASG_Group ASG Group, EFS file check start"
+	CONTINUE_FLG=fale
+	for i in $(seq $MAX_NUM_WAIT_LOOP); do
+		echo_log "In the for loop, begining of loop number is $i"
+		if [ ! -f $USERDATA_COMMON_FOLDER/wls_init_proc_completed.txt ]; then
+			echo_log "EFS set up is not fully ready and the first launched domain is not ready - sleep for $SLEEP_TIME seconds"
+			sleep $SLEEP_TIME
+		elif [ ! -f $AS_NM_PROPERTIES_FILE ]; then
+			echo_log "Weblogic Server has been setup and started - sleep for $SLEEP_TIME seconds"
+			sleep $SLEEP_TIME
+		else
+			if [ "$ASG_Group" = "oms_app" ]; then
+				if [ ! -f $USERDATA_COMMON_FOLDER/wls_app_admin_proc_completed.txt ]; then
+					echo_log "EFS is ready but the App Domain has not started - sleep for $SLEEP_TIME seconds"
+					sleep $SLEEP_TIME
+				else
+					CONTINUE_FLG=true
+					LOG_MSG="System Readiess check: EFS is ready and App Domain has started.  $ASG_Group can continue, go out of loop in loop number $i"
+					echo_log "$LOG_MSG"
+					break
+				fi
+			else
+				CONTINUE_FLG=true
+				LOG_MSG="System Readiess check: EFS is ready and JMS domain has started.  $ASG_Group can continue, go out of loop in loop number $i"
+				echo_log "$LOG_MSG"
+				break
+			fi
+		fi
+		echo_log "In the for loop, end of loop number is $i"
+	done
+fi
+
+if [ $CONTINUE_FLG = 'false' ]; then
+	echo_log "$ASG_Group can not start due to extensive long wait of system readiness check. Please ask the adminstrator to trouble shoot the problem"
+	exit 0
+fi
+
+if [ "$ASG_Group" = "oms_app" ] || [ "$ASG_Group" = "oms_jms" ]; then
+	CONTINUE_FLG='false'
+	echo_log "This is $ASG_Group ASG Group, domain lock check start"
+	for i in $(seq $MAX_NUM_WAIT_LOOP); do
+		echo_log "In the Domain Check for loop, begining of loop number is $i"
+		# shellcheck disable=SC1090,SC1091
+		. $LOCK_PROPERTIES_FILE
+		echo_log "edit_lock is $edit_lock"
+		if [ ! "${edit_lock:-}" = 'false' ]; then
+			echo_log "Domain $DOMAIN locked- sleep for $SLEEP_TIME seconds"
+			sleep $SLEEP_TIME
+		else
+			#Update lock file flag
+			TARGET_LK_KEY=edit_lock
+			REPLACEMENT_LK_VALUE=$ip4
+			#REPLACEMENT_LK_VALUE=true
+			sed -i "s/\($TARGET_LK_KEY *= *\).*/\1$REPLACEMENT_LK_VALUE/" "$LOCK_PROPERTIES_FILE"
+			sleep $LOCK_SLEEP_TIME
+			# shellcheck disable=SC1090,SC1091
+			. $LOCK_PROPERTIES_FILE
+			echo_log "After wait time $LOCK_SLEEP_TIME seconds, the edit_lock is $edit_lock"
+			if [ "${edit_lock:-}" = "$ip4" ]; then
+				REPLACEMENT_LK_VALUE=true
+				sed -i "s/\($TARGET_LK_KEY *= *\).*/\1$REPLACEMENT_LK_VALUE/" "$LOCK_PROPERTIES_FILE"
+				LOG_MSG="File lock check: $ASG_Group can continue, go out of loop in loop number $i"
+				echo_log "$LOG_MSG"
+				CONTINUE_FLG=true
+				break
+			else
+				echo_log "Server $ip4 can not continue since the process is locked by other server $edit_lock. Domain $DOMAIN locked- sleep for $SLEEP_TIME seconds"
+				sleep $SLEEP_TIME
+			fi
+		fi
+		echo_log "In the for loop, end of loop number is $i"
+	done
+fi
+
+if [ $CONTINUE_FLG = 'false' ]; then
+	echo_log "$ASG_Group can not start due to extensive long wait of availablity of the domain lock. Please ask the adminstrator to trouble shoot the problem"
+	exit 0
+fi
+
+LOG_MSG="userdata weblogic $DOMAIN domain start, with s3 $S3_URL"
+echo_log "$LOG_MSG"
+
+chown weblogic /u01/app/oracle
+chgrp weblogic /u01/app/oracle
+
+s3_populate() {
+	#aws s3 copy the file
+	echo_log "s3 copy config Started"
+	if [[ $(aws s3 ls $S3_CONFIG_ENV_URL/config.tar.gz | head) ]]; then
+		echo_log "Download $S3_CONFIG_ENV_URL/config.tar.gz"
+		aws s3 cp $S3_CONFIG_ENV_URL/config.tar.gz /u01/common/xfer
+	else
+		echo_log "Warning: $S3_CONFIG_ENV_URL/config.tar.gz does not exist, use default file"
+		aws s3 cp $S3_URL/config.tar.gz /u01/common/xfer
+	fi
+	cd /u01/common/xfer || {
+		echo "Error: /u01/common/xfer does not exist"
+		exit 1
+	}
+	tar -xzf config.tar.gz --directory /u01/app/oracle
+	chown -R weblogic /u01/app/oracle/config
+	chgrp -R weblogic /u01/app/oracle/config
+	echo_log "s3 copy config End"
+
+	echo_log "s3 copy config_oms Started"
+	if [[ $(aws s3 ls $S3_CONFIG_ENV_URL/config_oms.tar.gz | head) ]]; then
+		echo_log "Download $S3_CONFIG_ENV_URL/config_oms.tar.gz"
+		aws s3 cp $S3_CONFIG_ENV_URL/config_oms.tar.gz /u01/common/xfer
+	else
+		echo_log "Warning: $S3_CONFIG_ENV_URL/config_oms.tar.gz does not exist, use default file"
+		aws s3 cp $S3_URL/config_oms.tar.gz /u01/common/xfer
+	fi
+	cd /u01/common/xfer || {
+		echo "Error: /u01/common/xfer does not exist"
+		exit 1
+	}
+	tar -xzf config_oms.tar.gz --directory /u01/app/oracle
+	chown -R weblogic /u01/app/oracle/config_oms
+	chgrp -R weblogic /u01/app/oracle/config_oms
+	chmod 750 -R /u01/app/oracle/config_oms
+	echo_log "s3 copy config_oms End"
+
+	echo_log "s3 copy Installation zip Started"
+	aws s3 cp $S3_URL/product.tar.gz /u01/common/xfer
+	echo_log "s3 copy Installation S3 Download Completed"
+	cd /u01/common/xfer || {
+		echo "Error: /u01/common/xfer does not exist"
+		exit 1
+	}
+	echo_log "s3 copy Installation zip End. Unzip Start"
+	tar -xzf product.tar.gz --directory /u01/app/oracle
+	chown -R weblogic /u01/app/oracle/product
+	chgrp -R weblogic /u01/app/oracle/product
+	echo_log "Installation File Unzip End"
+
+	echo_log "s3 copy/unzip completed"
+}
+
+s3_jms_populate() {
+	echo_log "s3 copy config_jms Started"
+	if [[ $(aws s3 ls $S3_CONFIG_ENV_URL/config_jms.tar.gz | head) ]]; then
+		echo_log "Download $S3_CONFIG_ENV_URL/config_jms.tar.gz"
+		aws s3 cp $S3_CONFIG_ENV_URL/config_jms.tar.gz /u01/common/xfer
+	else
+		echo_log "Warning: $S3_CONFIG_ENV_URL/config_jms.tar.gz does not exist, use default file"
+		aws s3 cp $S3_URL/config_jms.tar.gz /u01/common/xfer
+	fi
+	cd /u01/common/xfer || {
+		echo "Error: /u01/common/xfer does not exist"
+		exit 1
+	}
+	tar -xzf config_jms.tar.gz --directory /u01/app/oracle
+	chown -R weblogic /u01/app/oracle/config_jms
+	chgrp -R weblogic /u01/app/oracle/config_jms
+	echo_log "s3 copy config_jms End"
+}
+
+s3_get_apps() {
+	echo_log "s3_get_app: Start"
+	# To change folder/logic for deployment: s3://oms-install/artifacts
+	APPLICATION_EAR=smcfs.ear
+	echo_log "s3 copy $APPLICATION_EAR Start"
+	aws s3 cp $S3_URL_APP/ $APP_DOMAIN_APPLICATIONS/ --recursive
+	echo_log "s3 copy $APPLICATION_EAR End"
+
+	echo_log "s3_get_app: End"
+}
+
+properties_jar_populate() {
+	# In case the folders have not been created
+	echo_log "properties_jar_populate: Start"
+
+	cp $APP_DOMAIN_APPLICATIONS_LOCAL/properties.jar $APP_RUNTIME
+	echo_log "copy properties.jar end"
+	cd $APP_PROPERTIES_FOLDER || {
+		echo "Error: $APP_PROPERTIES_FOLDER does not exist"
+		exit 1
+	}
+	echo_log "unzip properties.jar start"
+	jar -xf $APP_RUNTIME/properties.jar
+	chown -R weblogic $APP_PROPERTIES_FOLDER
+	chgrp -R weblogic $APP_PROPERTIES_FOLDER
+	chmod 755 -R $APP_PROPERTIES_FOLDER
+	echo_log "unzip properties.jar end"
+}
+
+s3_get_certifcate() {
+	# Env: dev 1, dev2, dev3, qa1, qa2, stg1, stg2, perf, prod
+	# Check if folder exist, if not, ignore and contine, then wls will use the default certifcate (dev2)
+	# if [[ $(aws s3 ls s3://oms-install/weblogic/cert/stg1/ | head) ]]; then echo "do stuff"; else echo "folder does not exist"; fi
+	echo_log "s3_get_certifcate: Start"
+	S3_URL_CERT_FOLDER="$S3_URL_CERT_PRFIX"/"$ENV"
+
+	if [ "$ENV" == "qa3" ]; then
+		echo_log "Testing production certification in QA3"
+		S3_URL_CERT_FOLDER="$S3_URL_CERT_PRFIX"/prod
+	fi
+
+	CERT_FILE=security.tar.gz
+	if [[ $(aws s3 ls "$S3_URL_CERT_FOLDER" | head) ]]; then
+		echo_log "s3 copy $CERT_FILE Started"
+		aws s3 cp "$S3_URL_CERT_FOLDER"/"$CERT_FILE" $CONFIG_COMMON_FOLDER
+		echo_log "s3 copy $CONFIG_COMMON_FOLDER/$CERT_FILE End"
+		cd $CONFIG_COMMON_FOLDER || {
+			echo "Error: $CONFIG_COMMON_FOLDER does not exist"
+			exit 1
+		}
+		if [ -d $CONFIG_COMMON_FOLDER/security ]; then
+			echo_log "Remove $CONFIG_COMMON_FOLDER/security folder"
+			rm -r $CONFIG_COMMON_FOLDER/security
+		fi
+		echo_log "Unzip $CONFIG_COMMON_FOLDER/$CERT_FILE Start"
+		tar -xzf $CERT_FILE --directory $CONFIG_COMMON_FOLDER
+		chown -R weblogic $CONFIG_COMMON_FOLDER/security
+		chgrp -R weblogic $CONFIG_COMMON_FOLDER/security
+		echo_log "Unzip $CERT_FILE End"
+	else
+		echo_log "Warning: S3 certification folder $S3_URL_CERT_FOLDER does not exist. Default certificates to be used"
+	fi
+	echo_log "s3_get_certifcate: End"
+}
+
+s3_get_app_ear() {
+	echo_log "s3_get_app_ear: Start"
+	# To change folder/logic for deployment: s3://oms-install/artifacts
+	APPLICATION_EAR=$OMS_APPLICATION.ear
+	echo_log "s3 copy $APPLICATION_EAR Start"
+	aws s3 cp $S3_URL_APP/$APPLICATION_EAR $APP_DOMAIN_APPLICATIONS/$APPLICATION_EAR
+	chown -R weblogic $APP_DOMAIN_APPLICATIONS/$APPLICATION_EAR
+	chgrp -R weblogic $APP_DOMAIN_APPLICATIONS/$APPLICATION_EAR
+	chmod 755 -R $APP_DOMAIN_APPLICATIONS/$APPLICATION_EAR
+	echo_log "s3 copy $APPLICATION_EAR End"
+
+	echo_log "s3_get_app_ear: End"
+}
+
+set_app_install_dir_permission() {
+	echo_log "set_app_install_dir_permission: Start"
+	# To change folder/application (ear file) permission so weblogic process can read it
+	if [ -d "$APP_DOMAIN_APPLICATIONS_LOCAL_ROOT" ]; then
+		chmod 755 -R $APP_DOMAIN_APPLICATIONS_LOCAL_ROOT
+		echo_log "$APP_DOMAIN_APPLICATIONS_LOCAL_ROOT exits. Its permission is updated recursively"
+	else
+		echo_log "Warning: $APP_DOMAIN_APPLICATIONS_LOCAL_ROOT does not exit"
+	fi
+	if [ -d "$APP_DOMAIN_APPLICATIONS" ]; then
+		chmod 755 -R $APP_DOMAIN_APPLICATIONS
+		chown -R weblogic $APP_DOMAIN_APPLICATIONS
+		chgrp -R weblogic $APP_DOMAIN_APPLICATIONS
+		echo_log "$APP_DOMAIN_APPLICATIONS exits. Its permission is updated recursively"
+	else
+		echo_log "Warning: $APP_DOMAIN_APPLICATIONS does not exit"
+	fi
+	echo_log "set_app_install_dir_permission: End"
+}
+
+override_props() {
+
+	INCLUDE_VARS=('{api}.' '{app}.')
+	EXCLUDE_VARS=('{agent}.')
+	TARGET_FILE=$1
+
+	for VARNAME in ${EXCLUDE_VARS[@]}; do
+		sed -i "s|$VARNAME|#|g" ${TARGET_FILE}
+		echo "Replace $VARNAME with # in $TARGET_FILE"
+	done
+	for VARNAME in ${INCLUDE_VARS[@]}; do
+		sed -i "s|$VARNAME||g" ${TARGET_FILE}
+		echo "Remove $VARNAME in $TARGET_FILE"
+	done
+}
+
+replace_props() {
+	SRC_FILE=$1
+	if [ $# -lt 1 ]; then
+		echo "no arguments supplied. Nothing to replace. exiting without errors"
+		exit 0
+	elif [ $# -gt 1 ]; then
+		TARGET_FILE=$2
+		[ -f ${TARGET_FILE} ] && cat ${SRC_FILE} >>${TARGET_FILE} || cp ${SRC_FILE} ${TARGET_FILE}
+	else
+		TARGET_FILE=$1
+	fi
+	echo "evaluating env variables in $TARGET_FILE"
+	for VARNAME in $(grep -P -o -e '\$\(\S+\)' ${TARGET_FILE} | awk -v RS='[:]' '{print}' | sed -e 's|^\$(||g' -e 's|)$||g' | grep . | sort -u); do
+		sed -i "s|\$($(echo $VARNAME))|${!VARNAME}|g" ${TARGET_FILE}
+		echo "Replace $VARNAME in $TARGET_FILE"
+	done
+}
+
+inject_integrtion_secrets() {
+	echo "Read Integration Secrets from AWS Secret Manager"
+	#secret_arn_list=$(/usr/local/bin/aws secretsmanager list-secrets --filters Key=name,Values=$SECRET_PREFIX-integration-secrets | jq -c -r '.SecretList[]|.ARN')
+	secret_arn_list=$(/usr/local/bin/aws secretsmanager list-secrets --filters Key=tag-key,Values=SecretType Key=tag-value,Values=$SECRET_PREFIX-secrets | jq -c -r '.SecretList[]|.ARN')
+	OLDIFS=$IFS
+	IFS=$'\n'
+	props=export
+	while read -r secret_arn; do
+		secret_value=$(/usr/local/bin/aws secretsmanager get-secret-value --secret-id $secret_arn)
+		secret_value_keys=$(jq -c -r '.SecretString | fromjson | keys[] ' <<<$secret_value)
+		while read -r secret_key; do
+			export k1=$secret_key
+			k1_val=$(jq -c -r '.SecretString | fromjson | to_entries[] | select(.key == env.k1) | .value ' <<<$secret_value)
+			props="$props $k1=\"$k1_val\""
+		done <<<$secret_value_keys
+	done <<<$secret_arn_list
+	IFS=$OLDIFS
+	eval "export $props"
+
+}
+
+s3_replace_jdk_cacerts() {
+	# Copy the jdk cacert files for all weblogic servers
+	echo_log "s3_replace_jdk_cacerts: Start"
+	echo_log "Replace the jdk out of box cacerts with a cacerts has required certificates"
+	cd $JDK_SECURITY_FOLDER || {
+		echo "Warning: $JDK_SECURITY_FOLDER does not exist"
+	}
+	cp cacerts cacerts_backup
+	aws s3 cp $S3_URL_USERDATA/fixed_cacerts cacerts
+	echo_log "s3_replace_jdk_cacerts: End"
+}
+
+creat_remove_wls_object_cron_job() {
+	echo_log "Start: creat_remove_wls_object_cron_job"
+	echo_log "RM_SERVER_COMMAND $RM_SERVER_COMMAND"
+	echo weblogic >>/etc/cron.allow
+
+	su weblogic <<HD_CREATERMCRONJOB
+        cd /tmp || {
+            echo "Error: /tmp does not exist"
+            exit 1
+        }
+        crontab -l > wlscron
+        #echo "25 * * * * /usr/bin/flock -n /tmp/rws.lockfile /u01/app/oracle/config/userdata/remove_wls_server.sh" >> wlscron
+        echo "$RM_SERVER_COMMAND" >> wlscron
+        #install new cron file
+        crontab wlscron
+        rm wlscron
+HD_CREATERMCRONJOB
+
+	echo_log "End: creat_remove_wls_object_cron_job"
+}
+
+manage_splunk() {
+	if [[ "$ENV_PREFIX" == "qa" ]]; then
+		# stop the splunk agent for QA per LLL request
+		$SPLUNK_INSTALL_DIR/bin/splunk stop
+	else
+		# restart the splunk agent
+		$SPLUNK_INSTALL_DIR/bin/splunk restart
+	fi
+}
+
+if [ ! -d "/u01/app/oracle/config" ]; then
+	#aws s3 copy files
+	echo_log "Call s3_populate function to populate efs"
+	s3_populate
+	echo_log "Call s3_jms_populate function to populate efs"
+	s3_jms_populate
+	echo_log "Call s3_get_certifcate function to update certificate"
+	s3_get_certifcate
+elif [ "$ASG_Group" = oms_app ] && [ ! "$IS_READINESS_TEST" = "TRUE" ]; then
+	echo_log "Call set_app_install_dir_permission and properties_jar_populate functions in App Server"
+	# s3_get_app_ear
+	set_app_install_dir_permission
+	properties_jar_populate
+	# Call OMS provided functions
+	echo_log "Call inject_integrtion_secrets and replace_props functions in App Server"
+	inject_integrtion_secrets
+	replace_props "$INSTALL_DIR/properties/system_overrides.properties"
+	replace_props "$INSTALL_DIR/properties/customer_overrides.$ENV.properties" "$INSTALL_DIR/properties/customer_overrides.properties"
+	override_props "$INSTALL_DIR/properties/customer_overrides.properties"
+
+	echo_log "Replace the index in the splunk configuration: Start"
+	cp "$SPLUNK_INSTALL_DIR/etc/system/local/inputs.conf" "$SPLUNK_INSTALL_DIR/etc/system/local/inputs_backup.conf"
+	replace_props "$SPLUNK_INSTALL_DIR/etc/system/local/inputs.conf"
+	echo_log "Replace the index in the splunk configuration: End"
+	echo_log "Call manage_splunk to stop/restart splunk: Start"
+	manage_splunk
+	echo_log "Call manage_splunk to stop/restart splunk: End"
+fi
+
+## Part 1.1
+if [ "$DOMAIN" = 'app' ]; then
+	CONFIG_FILE=$USERDATA_FOLDER/oms_app.config
+	LOG_FILE=$USERDATA_FOLDER/userdata_app.log
+	WLST_LOG_FILE_PREFIX=$WLST_SCRIPT_FOLDER/wlst_app_
+	WLST_LOG_FILE=$WLST_SCRIPT_FOLDER/wlst_app.log
+	DOMAIN_FOLDER=$ORACLE_FOLDER/config_oms/domains/oms_app
+	WLST_MAIN_SRC_FILE=start_wls_infra.py
+else
+	CONFIG_FILE=$USERDATA_FOLDER/oms_jms.config
+	LOG_FILE=$USERDATA_FOLDER/userdata_jms.log
+	WLST_LOG_FILE_PREFIX=$WLST_SCRIPT_FOLDER/wlst_jms_
+	WLST_LOG_FILE=$WLST_SCRIPT_FOLDER/wlst_jms.log
+	DOMAIN_FOLDER=$ORACLE_FOLDER/config_jms/domains/oms_jms
+	WLST_MAIN_SRC_FILE=start_wls_jms_infra.py
+fi
+DOMAIN_BIN_FOLDER="$DOMAIN_FOLDER"/bin
+
+LOG_MSG="userdata weblogic $DOMAIN domain, after mount and config populated,  start"
+echo_log "$LOG_MSG"
+
+#Read/Export configuration file
+# shellcheck disable=SC1090,SC1091
+. $CONFIG_FILE
+
+LOG_MSG="Domain: $DOMAIN - adminserver: ${adminserver:-} oms_server01: ${oms_server01:-} oms_server02: ${oms_server02:-}"
+echo_log "$LOG_MSG"
+
+HOSTNAME_FULL=$(hostname)
+IFS='.' read -ra HOSTNAME_Arr <<<"$HOSTNAME_FULL"
+HOSTNAME=${HOSTNAME_Arr[0]}
+
+input_parameter="${ip4}""||deploy|""$DOMAIN""|""$OMS_APPLICATION"
+echo_log "wlst input parameter: $input_parameter"
+WLST_LOG_FILE=$WLST_LOG_FILE_PREFIX"deploy_""$HOSTNAME""_""$(TZ=America/New_York date +%b-%d-%Y-%T)"".log"
+echo_log "wlst log file : $WLST_LOG_FILE"
+su weblogic <<HD_WLSTSTART
+			$WLST_SHELL $WLST_SCRIPT_FOLDER/$WLST_MAIN_SRC_FILE -p "$input_parameter" >$WLST_LOG_FILE 2>&1
+HD_WLSTSTART
+echo_log "deploy application to host $HOSTNAME Completed"
+
+echo_log "Before weblogic process end, re-source config file"
+# shellcheck disable=SC1090,SC1091
+. $CONFIG_FILE
+
+LOG_MSG="Domain: $DOMAIN - adminserver: ${adminserver:-} oms_server01: ${oms_server01:-} oms_server02: ${oms_server02:-}"
+echo_log "$LOG_MSG"
+echo_log "weblogic process end"
