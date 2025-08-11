@@ -3,6 +3,7 @@ VPC
 - Subnets
 - Route Tables
 - NAT Gateway
+- Internet gateway
 - Security Groups
 Load Balancers
 - Targets groups
