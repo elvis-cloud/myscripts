@@ -1,0 +1,25 @@
+AWS Focus on Networking
+VPC
+- Subnets
+- Route Tables
+- NAT Gateway
+- Security Groups
+Load Balancers
+- Targets groups
+- Routing rules
+- ASG's
+- Scaling policies
+VPC Peering
+Transit Gateways
+Cross Region peering
+VPC Endpoints
+VPC Flow logs
+Network loadbalancer
+AWS WAF and Shield
+AWS Certificate Manager
+
+AWS Focus on CICD
+
+AWS Focus on Operations
+
+AWS Focus on Security
