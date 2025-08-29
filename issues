@@ -1,6 +1,8 @@
 Problem invoking WLST - Traceback (innermost last):
-  (no code object) at line 0
-  File "/opt/oms-install/start_wls_infra.py", line 381
-            )
-             ^
-SyntaxError: invalid syntax
+  File "/opt/oms-install/start_wls_infra.py", line 318, in ?
+  File "/opt/oms-install/start_wls_infra.py", line 464, in WebLogicClient
+NameError: name
+
+Aug-29-2025#12:24:48.704341 INFO  lib/weblogic.sh:weblogic_unlock_domain() unlocking domain: app
+Cloud-init v. 23.4-7.el8_10.8 running 'modules:final' at Fri, 29 Aug 2025 16:21:17 +0000. Up 43.62 seconds.
+Cloud-init v. 23.4-7.el8_10.8 finished at Fri, 29 Aug 2025 16:24:48 +0000. Datasource DataSourceEc2Local.  Up 255.45 seconds
