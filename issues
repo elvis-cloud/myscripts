@@ -1,4 +1,4 @@
-<Error
-            ErrorCode="com.sterlingcommerce.woodstock.util.frame.jdbc.JDBCConnectionException"
-            ErrorDescription="" ErrorRelatedMoreInfo="weblogic.jdbc.extensions.PoolLimitSQLException: weblogic.common.resourcepool.ResourceLimitException: No resources currently available in pool OMSDS to allocate to applications, please increase the size of the pool and retry..">
-            <Stack>com.sterlingcommerce.woodstock.util.frame.jdbc.JDBCConnectionException: weblogic.jdbc.extensions.PoolLimitSQLException: weblogic.common.resourcepool.ResourceLimitException: No resources currently available in pool OMSDS to allocate to applications, please increase the size of the pool and retry..
+Problem invoking WLST - Traceback (innermost last):
+  File "/opt/oms-install/start_wls_infra.py", line 316, in ?
+  File "/opt/oms-install/start_wls_infra.py", line 449, in WebLogicClient
+NameError: name
