@@ -1,38 +1,7 @@
-<Sep 4, 2025 1:15:16,158 PM PDT> <Error> <Deployer> <BEA-149265> <Failure occurred in the execution of deployment request with ID "243790245575128" for task "177" on [partition-name: DOMAIN]. Error is: "weblogic.management.DeploymentException: java.lang.NullPointerException"
-weblogic.management.DeploymentException: java.lang.NullPointerException
-        at weblogic.application.internal.BaseDeployment.throwAppException(BaseDeployment.java:132)
-        at weblogic.application.internal.BaseDeployment.throwAppException(BaseDeployment.java:128)
-        at weblogic.application.internal.BaseDeployment.deactivate(BaseDeployment.java:288)
-        at weblogic.application.internal.EarDeployment.deactivate(EarDeployment.java:66)
-        at weblogic.application.internal.DeploymentStateChecker.deactivate(DeploymentStateChecker.java:202)
-        Truncated.
-Caused By: java.lang.NullPointerException
-        at weblogic.application.internal.flow.BaseLifecycleFlow$LifecycleListenerAction.getListeners(BaseLifecycleFlow.java:258)
-        at weblogic.application.internal.flow.BaseLifecycleFlow$LifecycleListenerAction.invoke(BaseLifecycleFlow.java:194)
-        at weblogic.application.internal.flow.HeadLifecycleFlow.deactivate(HeadLifecycleFlow.java:262)
-        at weblogic.application.internal.BaseDeployment$2.previous(BaseDeployment.java:758)
-        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:207)
-        Truncated.
->
-<Sep 4, 2025 1:15:16,206 PM PDT> <Error> <Deployer> <BEA-149202> <Encountered an exception while attempting to commit the 8 task for the application "smcfs_api" on [partition-name: DOMAIN].>
-<Sep 4, 2025 2:37:25,674 PM PDT> <Notice> <Server> <BEA-002638> <Force shutdown was issued remotely from 10.240.112.110:7001.>
-<Sep 4, 2025 2:37:25,675 PM PDT> <Notice> <WebLogicServer> <BEA-000396> <Server shutdown has been requested by eakumbom.>
-<Sep 4, 2025 2:37:25,706 PM PDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to FORCE_SUSPENDING.>
-<Sep 4, 2025 2:37:25,745 PM PDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to ADMIN.>
-<Sep 4, 2025 2:37:25,760 PM PDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to FORCE_SHUTTING_DOWN.>
-Sep 04, 2025 2:37:25 PM weblogic.wsee.WseeCoreMessages logWseeServiceHalting
-INFO: The Wsee Service is halting
-<Sep 4, 2025 2:37:25,775 PM PDT> <Notice> <Log Management> <BEA-170037> <The log monitoring service timer has been stopped.>
-<Sep 4, 2025 2:37:25,853 PM PDT> <Warning> <JMX> <BEA-149513> <JMX Connector Server stopped at service:jmx:iiop://10.240.112.113:8001/jndi/weblogic.management.mbeanservers.runtime.>
-Stopping Derby server...
-Derby server stopped.
-<Sep 4, 2025 2:37:26 PM PDT> <INFO> <NodeManager> <The server 'oms_server11' with process id 153463 is no longer alive; waiting for the process to die.>
-<Sep 4, 2025 2:37:26 PM PDT> <INFO> <NodeManager> <Server was shut down normally>
-<Sep 4, 2025 2:38:40 PM PDT> <INFO> <NodeManager> <Starting WebLogic server with command line: /u01/app/oracle/config_oms/domains/oms_app/bin/startWebLogic.sh >
-<Sep 4, 2025 2:38:40 PM PDT> <INFO> <NodeManager> <Working directory is '/u01/app/oracle/config_oms/domains/oms_app'>
-<Sep 4, 2025 2:38:40 PM PDT> <INFO> <NodeManager> <Server output log file is '/u01/app/oracle/config_oms/domains/oms_app/servers/oms_server11/logs/oms_server11.out'>
-.
-.
-JAVA Memory arguments: -Xms256m -Xmx512m -XX:CompileThreshold=8000
-.
-CLASSPATH=/usr/java/jdk1.8.0_301-amd64/lib/tools.jar:/u01/app/oracle/product/fmw_12.2.1.4/wlserver/server/lib/weblogic.jar:/u01/app/oracle/product/fmw_12.2.1.4/wlserver/../oracle_common/modules/thirdparty/ant-contrib-1.0b3.jar:/u01/app/oracle/product/fmw_12.2.1.4/wlserver/modules/features/oracle.wls.common.nodemanager.jar::/u01/app/oracle/product/fmw_12.2.1.4/wlserver/common/derby/lib/derbynet.jar:/u01/app/oracle/product/fmw_12.2.1.4/wlserver/common/derby/lib/derbyclient.jar:/u01/app/oracle/product/fmw_12.2.1.4/wlserver/common/derby/lib/derby.jar:/usr/java/jdk1.8.0_301-amd64/lib/tools.jar:
+aws s3 cp s3://oms-install/weblogic/auto-restart/jms/weblogic-nodemgr.service /etc/systemd/system/weblogic-nodemgr.service
+chmod 644 /etc/systemd/system/weblogic-nodemgr.service
+
+aws s3 cp s3://oms-install/userdata/start_jms_nodemgr.sh /u01/app/oracle/config/script/start_jms_nodemgr.sh
+chown weblogic: /u01/app/oracle/config/script/start_jms_nodemgr.sh
+chmod 755 /u01/app/oracle/config/script/start_jms_nodemgr.sh
+sudo systemctl enable weblogic-nodemgr
