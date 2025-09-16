@@ -5,9 +5,13 @@ INTERVAL=20
 # Setting the Java Home, by giving the path where your JDK is kept
 JAVA_HOME=/usr/java/jdk1.8.0_301-amd64
 
+# Create a dated directory
+OUTDIR="jstacks_$(date +%Y%m%d_%H%M%S)_$1"
+mkdir -p "$OUTDIR"
+
 for ((i=1; i <= $LOOP; i++))
 do
-   $JAVA_HOME/bin/jstack -l $1 >> jstack_threaddump_$1.out
+   $JAVA_HOME/bin/jstack -l $1 >> "$OUTDIR/jstack_threaddump_$1.out"
    echo "thread dump #" $i
    if [ $i -lt $LOOP ]; then
     echo "sleeping..."
