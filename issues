@@ -1,52 +1,13 @@
-# Number of times to collect data.
-LOOP=6
-# Interval in seconds between data points.
-INTERVAL=20
-# Setting the Java Home, by giving the path where your JDK is kept
-JAVA_HOME=/usr/java/jdk1.8.0_301-amd64
-
-# Create a dated directory
-OUTDIR="jstacks_$(date +%Y%m%d_%H%M%S)_$1"
-mkdir -p "$OUTDIR"
-
-for ((i=1; i <= $LOOP; i++))
-do
-   $JAVA_HOME/bin/jstack -l $1 >> "$OUTDIR/jstack_threaddump_$1.out"
-   echo "thread dump #" $i
-   if [ $i -lt $LOOP ]; then
-    echo "sleeping..."
-    sleep $INTERVAL
-  fi
-done
-
-Goal: Quickly collect a short series of Java thread dumps from a running JVM to help diagnose high CPU, deadlocks, hangs, stuck threads, or slow responses.
-
-What it does:
-
-Runs jstack -l <PID> multiple times.
-
-Creates a dated directory
-
-Appends the output to a single file: jstack_threaddump_<PID>.out.
-
-Sleeps INTERVAL seconds between runs until it has collected LOOP dumps.
-
-How to Run It
-
-Copy the script to the target server and save it as thread_dump.sh (or any name you like).
-
-Make it executable:
-
-chmod +x thread_dump.sh
-
-Run it with the PID:
-
-./thread_dump.sh <PID>
-# Example
-./thread_dump.sh 12345
-
-Output:
-
-A file named jstack_threaddump_<PID>.out appears in the dated directory.
-
-You’ll also see simple progress messages: thread dump #1, sleeping..., etc.
+Execute threads total
+Execute threads idle
+Threads stuck
+Threads standby
+Threads hogging
+Total complete requests
+WebLogic servlet execution time high
+WebLogic servlet execution time total
+Queue length 
+User requests pending
+Server channel - messages received
+Sockets accepted
+Throughput
