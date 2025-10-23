@@ -1,386 +1,403 @@
-#####<Oct 23, 2025 9:21:04,562 AM PDT> <Info> <WorkManager> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <Timer-2> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0000000a> <1761236464562><[severity-value: 64] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002959> <Self-tuning thread pool contains 2 running threads, 2 idle threads, and 17 standby threads>####<Oct 23, 2025 9:22:44,640 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73a> <1761236564640> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(OMS_QCF, weblogic.rmi.cluster.ClusterableRemoteObject) succeeded>####<Oct 23, 2025 9:22:44,938 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73b> <1761236564938> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>####<Oct 23, 2025 9:22:44,939 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73b> <1761236564939> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***>####<Oct 23, 2025 9:22:44,939 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73b> <1761236564939> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <   *** Peer > 7 WriteReplace return this ***>####<Oct 23, 2025 9:22:45,035 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73c> <1761236565035> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>####<Oct 23, 2025 9:22:45,035 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73c> <1761236565035> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <   *** Peer > 7 WriteReplace return this ***
->####<Oct 23, 2025 9:22:45,035 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73c> <1761236565035> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Creating consumer to Destination JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution: clientId = null subscriptionName=null>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Initialize BEConsumer: destination=weblogic.jms.backend.BEQueueImpl@38df940c subqueue = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution clientId =null client Id policy = 0 selector=null noLocal = false reboot false sub: null this weblogic.jms.backend.BEConsumerImpl@62ca280>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Firing up periodic security checks>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Registered <anonymous> for security checks on type=<jms>, application=JMS_MODULEJmsSystemModule, destinationType=queue, resource=AGT.PaymentExecution, action=receive participant weblogic.jms.backend.BEConsumerImpl@62ca280>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <New consumer for JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a start request on the consumer weblogic.jms.backend.BEConsumerImpl@62ca280>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73d> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Created a new consumer with ID <6688691632811500123.214> on queue JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,099 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ rebind(oms_server09, weblogic.jms.dd.DDMemberStatusSharer) succeeded>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ advertise rebind(weblogic.jms.internal.ddmember.JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution.oms_server09, weblogic.jms.dd.DDMemberStatusSharer)>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:45,100 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73e> <1761236565100> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:45,104 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73f> <1761236565104> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>
-####<Oct 23, 2025 9:22:45,105 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73f> <1761236565105> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,105 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c73f> <1761236565105> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,132 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c740> <1761236565132> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>
-####<Oct 23, 2025 9:22:45,132 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c740> <1761236565132> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,132 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c740> <1761236565132> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,136 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c741> <1761236565136> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <<domainURLContextFactory>: getObjectInstance(null, null)>
-####<Oct 23, 2025 9:22:45,136 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c741> <1761236565136> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ rebind(oms_server10, weblogic.jms.dd.DDMemberStatusSharer) succeeded>
-####<Oct 23, 2025 9:22:45,138 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c742> <1761236565138> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Creating consumer to Destination JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution: clientId = null subscriptionName=null>
-####<Oct 23, 2025 9:22:45,138 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c742> <1761236565138> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Initialize BEConsumer: destination=weblogic.jms.backend.BEQueueImpl@38df940c subqueue = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution clientId =null client Id policy = 0 selector=null noLocal = false reboot false sub: null this weblogic.jms.backend.BEConsumerImpl@d285d26>
-####<Oct 23, 2025 9:22:45,138 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c742> <1761236565138> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Registered <anonymous> for security checks on type=<jms>, application=JMS_MODULEJmsSystemModule, destinationType=queue, resource=AGT.PaymentExecution, action=receive participant weblogic.jms.backend.BEConsumerImpl@d285d26>
-####<Oct 23, 2025 9:22:45,138 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c742> <1761236565138> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <New consumer for JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,138 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c742> <1761236565138> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a start request on the consumer weblogic.jms.backend.BEConsumerImpl@d285d26>
-####<Oct 23, 2025 9:22:45,138 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c742> <1761236565138> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Created a new consumer with ID <6688691632811500123.220> on queue JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to weblogic.jms.dd.DDMember$EventProcessor@52812c4b>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from weblogic.jms.dd.DDMember$EventProcessor@52812c4b>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:45,139 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c743> <1761236565139> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:45,140 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c744> <1761236565140> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>
-####<Oct 23, 2025 9:22:45,140 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c744> <1761236565140> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,140 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c744> <1761236565140> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,737 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c745> <1761236565737> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(OMS_QCF, weblogic.rmi.cluster.ClusterableRemoteObject) succeeded>
-####<Oct 23, 2025 9:22:45,743 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c746> <1761236565743> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>
-####<Oct 23, 2025 9:22:45,744 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c746> <1761236565744> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,744 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c746> <1761236565744> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,752 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c747> <1761236565752> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Returning destination: JMS_MODULEJmsSystemModule!AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,752 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c747> <1761236565752> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <FESession.setUpBackEndSession()>
-####<Oct 23, 2025 9:22:45,785 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c748> <1761236565785> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Unable to resolve 'weblogic.transaction.coordinators.oms_server09'. Resolved 'weblogic.transaction.coordinators'>
-####<Oct 23, 2025 9:22:45,785 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c748> <1761236565785> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookupInSharable(oms_server09, weblogic.transaction.internal.ClientTransactionManagerImpl) succeeded>
-####<Oct 23, 2025 9:22:45,840 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <><5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c749> <1761236565840> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(OMS_QCF, weblogic.rmi.cluster.ClusterableRemoteObject) succeeded>
-####<Oct 23, 2025 9:22:45,843 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74a> <1761236565843> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ lookup(PaymentExecution, weblogic.jms.common.DistributedDestinationImpl) succeeded>
-####<Oct 23, 2025 9:22:45,844 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74a> <1761236565844> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,844 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74a> <1761236565844> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <
-   *** Peer > 7 WriteReplace return this ***
->
-####<Oct 23, 2025 9:22:45,851 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74b> <1761236565851> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Creating consumer to Destination JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution: clientId = null subscriptionName=null>
-####<Oct 23, 2025 9:22:45,851 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74b> <1761236565851> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Initialize BEConsumer: destination=weblogic.jms.backend.BEQueueImpl@38df940c subqueue = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution clientId =null client Id policy = 0 selector=null noLocal = false reboot false sub: null this weblogic.jms.backend.BEConsumerImpl@58c0a889>
-####<Oct 23, 2025 9:22:45,851 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74b> <1761236565851> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Registered <anonymous> for security checks on type=<jms>, application=JMS_MODULEJmsSystemModule, destinationType=queue, resource=AGT.PaymentExecution, action=receive participant weblogic.jms.backend.BEConsumerImpl@58c0a889>
-####<Oct 23, 2025 9:22:45,851 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74b> <1761236565851> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <New consumer for JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,851 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74b> <1761236565851> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Created a new consumer with ID <6688691632811500123.227> on queue JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution>
-####<Oct 23, 2025 9:22:45,855 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74c> <1761236565855> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a start request on the consumer weblogic.jms.backend.BEConsumerImpl@58c0a889>
-####<Oct 23, 2025 9:22:45,861 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <BEA1-000059B57EE47F1D2452> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74d> <1761236565861> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request:state = 0>
-####<Oct 23, 2025 9:22:45,861 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <BEA1-000059B57EE47F1D2452> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74d> <1761236565861> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Starting blocking receivefor consumer>
-####<Oct 23, 2025 9:22:45,861 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <BEA1-000059B57EE47F1D2452> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74d> <1761236565861> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request:state = 101>
-####<Oct 23, 2025 9:22:45,861 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <BEA1-000059B57EE47F1D2452> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74d> <1761236565861> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Associating message with transaction>
-####<Oct 23, 2025 9:22:45,861 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <BEA1-000059B57EE47F1D2452> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74d> <1761236565861> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request:state = 102>
-####<Oct 23, 2025 9:22:45,861 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <BEA1-000059B57EE47F1D2452> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74d> <1761236565861> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive for consumer complete>
-####<Oct 23, 2025 9:22:45,869 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74e> <1761236565869> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a recover request for sequence num 0>
-####<Oct 23, 2025 9:22:45,869 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74e> <1761236565869> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending messages through 0 sessionId <6688691632811500123.225> sequenceId <6688691632811500123.226> connection weblogic.jms.backend.BEConnection@5695f782>
-####<Oct 23, 2025 9:22:45,869 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74e> <1761236565869> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:45,869 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74e> <1761236565869> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <recovered 0 messages before 0>
-####<Oct 23, 2025 9:22:45,872 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74f> <1761236565872> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Close backend consumer request: <6688691632811500123.227>, backend lastSequenceNumber=0, backend isLastSequenceNumberFirstNotSeen=false>
-####<Oct 23, 2025 9:22:45,872 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74f> <1761236565872> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:45,872 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74f> <1761236565872> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending and outgoing messages after 0, inclusive=false>
-####<Oct 23, 2025 9:22:45,872 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74f> <1761236565872> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:45,872 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c74f> <1761236565872> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Unregistered for security checks, weblogic.jms.backend.BEConsumerImpl@58c0a889>
-####<Oct 23, 2025 9:22:45,874 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c750> <1761236565874> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a recover request for sequence num 0>
-####<Oct 23, 2025 9:22:45,874 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c750> <1761236565874> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending messages through 0 sessionId <6688691632811500123.225> sequenceId <6688691632811500123.226> connection weblogic.jms.backend.BEConnection@5695f782>
-####<Oct 23, 2025 9:22:45,874 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c750> <1761236565874> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:45,874 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c750> <1761236565874> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <recovered 0 messages before 0>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c751> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request: state = 0>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c751> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Starting blocking receive for consumer>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c751> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request: state = 101>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c751> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request: state = 102>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c751> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive for consumer complete>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c752> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request: state = 0>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c752> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Starting blocking receive for consumer>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c752> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request: state = 101>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c752> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive request: state = 102>
-####<Oct 23, 2025 9:22:45,883 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c752> <1761236565883> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Blocking receive for consumer complete>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c753> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Starting an acknowledge request for sequence number 1>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c753> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending messages through 1 sessionId <6688691632811500123.218> sequenceId <6688691632811500123.219> connection weblogic.jms.backend.BEConnection@617b3e8c>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c753> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Acknowledging 1 messages for JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution session weblogic.jms.backend.BESessionImpl@11db6281>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c753> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Acknowledgement complete>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c754> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Starting an acknowledge request for sequence number 1>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c754> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending messages through 1 sessionId <6688691632811500123.212> sequenceId <6688691632811500123.213> connection weblogic.jms.backend.BEConnection@617b3e8c>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c754> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Acknowledging 1 messages for JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution session weblogic.jms.backend.BESessionImpl@11db628f>
-####<Oct 23, 2025 9:22:45,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c754> <1761236565886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Acknowledgement complete>
-####<Oct 23, 2025 9:22:48,618 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c739> <1761236568618> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Try to create JVM connection 2 time, encounter : java.net.ConnectException: t3://qa-osb-vip01.lululemoninternal.com,qa-osb-vip02.lululemoninternal.com,qa-osb-vip03.lululemoninternal.com:8001: Destination 10.154.112.98, 8001 unreachable.; nested exception is:
-        java.net.SocketTimeoutException: newSocket: Couldn't connect to (qa-osb-vip02.lululemoninternal.com/10.154.112.98, 8001) even after 60000 millisecs; No available router to destination.; nested exceptionis:
-        java.rmi.ConnectException: No available router to destination.>
-####<Oct 23, 2025 9:22:55,879 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c755> <1761236575879> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:55,879 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c755> <1761236575879> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a recover request for sequence num 9223372036854775807>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending messages through MAX sessionId <6688691632811500123.218> sequenceId <6688691632811500123.219> connection weblogic.jms.backend.BEConnection@617b3e8c>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <recovered 0 messages before 9223372036854775807>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending and outgoing messages after 0, inclusive=false>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:55,882 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c756> <1761236575882> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Unregistered for security checks, weblogic.jms.backend.BEConsumerImpl@d285d26>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a recover request for sequence num 9223372036854775807>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending messages through MAX sessionId <6688691632811500123.212> sequenceId <6688691632811500123.213> connection weblogic.jms.backend.BEConnection@617b3e8c>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <recovered 0 messages before 9223372036854775807>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Got a stop request on the consumer>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Removing pending and outgoing messages after 0, inclusive=false>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Replacing 0 messages on the kernel queue, incrementing>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c757> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Unregistered for security checks, weblogic.jms.backend.BEConsumerImpl@62ca280>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ rebind(oms_server09, weblogic.jms.dd.DDMemberStatusSharer) succeeded>
-####<Oct 23, 2025 9:22:55,885 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575885> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ advertise rebind(weblogic.jms.internal.ddmember.JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution.oms_server09, weblogic.jms.dd.DDMemberStatusSharer)>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-true | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:55,886 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c758> <1761236575886> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:55,903 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c759> <1761236575903> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <<domainURLContextFactory>: getObjectInstance(null, null)>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c759> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <+++ rebind(oms_server10, weblogic.jms.dd.DDMemberStatusSharer) succeeded>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to weblogic.jms.dd.DDMember$EventProcessor@61209f71>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from weblogic.jms.dd.DDMember$EventProcessor@61209f71>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server10
- jmsServerConfigName        = LuluJMS.oms_server10
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server10
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server10, member wlsServerName[oms_server10]>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < ------- Distributed Destination ------------------------------
- member name                = JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution
- jmsServerInstanceName      = LuluJMS.oms_server09
- jmsServerConfigName        = LuluJMS.oms_server09
- distributedConfigMbeanName = JMS_MODULEJmsSystemModule!AGT.PaymentExecution
- ddJNDIName                 = AGT.PaymentExecution
- dispatcherId               = oms_server09
- ---------------------------------------------------------------
->
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution getUpMembers() DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11 is up? true DDImpl JMS_MODULEJmsSystemModule!AGT.PaymentExecution member dipatcherId oms_server09, member wlsServerName[oms_server09]>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <JMS_MODULEJmsSystemModule!AGT.PaymentExecution with load balancing policy Round Robin has the following members: >
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-false | wlsServer-oms_server10 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server10>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> < JMS_MODULEJmsSystemModule!AGT.PaymentExecution JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution | pers-true | cons-false | weit-1 | locl-true | wlsServer-oms_server09 | distributionPolicy--1 | onDynamicNonUPS-false | dispId-oms_server09>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from FEDDHandler: JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 1762517656>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Calling out to QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from QueueForwardingManager: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution within JMS_MODULEJmsSystemModule!AGT.PaymentExecution, hash: 137711015>
-####<Oct 23, 2025 9:22:55,904 AM PDT> <Debug> <JMSBackEnd> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75a> <1761236575904> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Back from [DDHandler@1001177417, name=JMS_MODULEJmsSystemModule!AGT.PaymentExecution, isLocal=true, dd: JMS_MODULEJmsSystemModule!AGT.PaymentExecution with Members:[JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution]
-values:
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server10@AGT.PaymentExecution, hash: 605253413, dispId: oms_server10, backEndId: <6688691632811500123.13>:oms_server10, destinationId: <6688691632811500123.92>, deploymentMemberType: 3, remoteSecurityMode: 11)
-(DDMember: JMS_MODULEJmsSystemModule!LuluJMS.oms_server09@AGT.PaymentExecution, hash: -1802148485, dispId: oms_server09, backEndId: <4485340699488760777.13>:oms_server09, destinationId: <4485340699488760777.92>, deploymentMemberType: 67, remoteSecurityMode: 11)]>
-####<Oct 23, 2025 9:23:04,568 AM PDT> <Info> <WorkManager> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <Timer-2> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0000000a> <1761236584568> <[severity-value: 64] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002959> <Self-tuning thread pool contains 1 running threads, 3 idle threads, and 17 standby threads>
-####<Oct 23, 2025 9:23:46,099 AM PDT> <Debug> <JMSCommon> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75b> <1761236626099> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Stopping periodic security checks>
-####<Oct 23, 2025 9:24:11,058 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75c> <1761236651058> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Try to create JVM connection 1 time, encounter : java.net.ConnectException: t3://stg-osbsplychn-vip001.lululemoninternal.com,stg-osbsplychn-vip002.lululemoninternal.com,stg-osbsplychn-vip003.lululemoninternal.com,stg-osbsplychn-vip004.lululemoninternal.com:8001: Destination 10.154.112.219, 8001 unreachable.; nested exception is:
-        java.net.SocketTimeoutException: newSocket: Couldn't connect to (stg-osbsplychn-vip001.lululemoninternal.com/10.154.112.219, 8001) even after 60000 millisecs; No available router to destination.; nestedexception is:
-        java.rmi.ConnectException: No available router to destination.>
-####<Oct 23, 2025 9:25:04,574 AM PDT> <Info> <WorkManager> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <Timer-2> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0000000a> <1761236704574> <[severity-value: 64] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002959> <Self-tuning thread pool contains 2 running threads, 2 idle threads, and 17 standby threads>
-####<Oct 23, 2025 9:26:09,675 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75d> <1761236769675> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Try to create JVM connection 1 time, encounter : java.net.ConnectException: t3://qa-osb-vip01.lululemoninternal.com,qa-osb-vip02.lululemoninternal.com,qa-osb-vip03.lululemoninternal.com:8001: Destination 10.154.112.97, 8001 unreachable.; nested exception is:
-        java.net.SocketTimeoutException: newSocket: Couldn't connect to (qa-osb-vip01.lululemoninternal.com/10.154.112.97, 8001) even after 60000 millisecs; No available router to destination.; nested exceptionis:
-        java.rmi.ConnectException: No available router to destination.>
-####<Oct 23, 2025 9:27:04,581 AM PDT> <Info> <WorkManager> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <Timer-2> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0000000a> <1761236824581> <[severity-value: 64] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-002959> <Self-tuning thread pool contains 2 running threads, 2 idle threads, and 17 standby threads>
-####<Oct 23, 2025 9:28:11,717 AM PDT> <Debug> <JNDI> <ip-10-240-102-175.acq2-oms.aws.lllint.com> <oms_server09> <[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <5e469b6e-27fb-4b1d-90f9-8d1d047d28c1-0004c75c> <1761236891717> <[severity-value: 128] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000000> <Try to create JVM connection 2 time, encounter : java.net.ConnectException: t3://stg-osbsplychn-vip001.lululemoninternal.com,stg-osbsplychn-vip002.lululemoninternal.com,stg-osbsplychn-vip003.lululemoninternal.com,stg-osbsplychn-vip004.lululemoninternal.com:8001: Destination 10.154.112.220, 8001 unreachable.; nested exception is:
-        java.net.SocketTimeoutException: newSocket: Couldn't connect to (stg-osbsplychn-vip002.lululemoninternal.com/10.154.112.220, 8001) even after 60000 millisecs; No available router to destination.; nestedexception is:
-        java.rmi.ConnectException: No available router to destination.>
+-r--   ApplicationContainer                         false
+-r--   ClassChangeNotifier                          false
+-r--   ClassFinder                                  false
+-r--   ClassLoader                                  false
+-r--   ClassLoaderVerbose                           false
+-r--   ClassloaderWebApp                            false
+-r--   ClasspathServlet                             false
+-r--   DebugAbbreviation                            false
+-r--   DebugAllowList                               false
+-r--   DebugAppAnnotations                          false
+-r--   DebugAppContainer                            false
+-r--   DebugAsyncQueue                              false
+-r--   DebugBeanTreeHarvesterControl                false
+-r--   DebugBeanTreeHarvesterDataCollection         false
+-r--   DebugBeanTreeHarvesterResolution             false
+-r--   DebugBeanTreeHarvesterThreading              false
+-r--   DebugBootstrapServlet                        false
+-r--   DebugBuzzProtocol                            false
+-r--   DebugBuzzProtocolDetails                     false
+-r--   DebugBuzzProtocolHttp                        false
+-r--   DebugCertRevocCheck                          false
+-r--   DebugClassLoadingContextualTrace             false
+-r--   DebugClassLoadingVerbose                     false
+-r--   DebugClassRedef                              false
+-r--   DebugClassSize                               false
+-r--   DebugCluster                                 false
+-r--   DebugClusterAnnouncements                    false
+-r--   DebugClusterFragments                        false
+-r--   DebugClusterHeartbeats                       false
+-r--   DebugConcurrent                              false
+-r--   DebugConcurrentContext                       false
+-r--   DebugConcurrentMES                           false
+-r--   DebugConcurrentMSES                          false
+-r--   DebugConcurrentMTF                           false
+-r--   DebugConcurrentTransaction                   false
+-r--   DebugConfigurationEdit                       false
+-r--   DebugConfigurationRuntime                    false
+-r--   DebugConnection                              false
+-r--   DebugConnectorService                        false
+-r--   DebugConsensusLeasing                        false
+-r--   DebugDGCEnrollment                           false
+-r--   DebugDRSCalls                                false
+-r--   DebugDRSHeartbeats                           false
+-r--   DebugDRSMessages                             false
+-r--   DebugDRSQueues                               false
+-r--   DebugDRSStateTransitions                     false
+-r--   DebugDRSUpdateStatus                         false
+-r--   DebugDeploy                                  false
+-r--   DebugDeployment                              false
+-r--   DebugDeploymentConcise                       false
+-r--   DebugDeploymentPlan                          false
+-r--   DebugDeploymentService                       false
+-r--   DebugDeploymentServiceInternal               false
+-r--   DebugDeploymentServiceStatusUpdates          false
+-r--   DebugDeploymentServiceTransport              false
+-r--   DebugDeploymentServiceTransportHttp          false
+-r--   DebugDescriptor                              false
+-r--   DebugDeserializationTimeLimit                false
+-r--   DebugDiagnosticAccessor                      false
+-r--   DebugDiagnosticArchive                       false
+-r--   DebugDiagnosticArchiveRetirement             false
+-r--   DebugDiagnosticCollections                   false
+-r--   DebugDiagnosticContext                       false
+-r--   DebugDiagnosticDataGathering                 false
+-r--   DebugDiagnosticFileArchive                   false
+-r--   DebugDiagnosticImage                         false
+-r--   DebugDiagnosticInstrumentation               false
+-r--   DebugDiagnosticInstrumentationActions        false
+-r--   DebugDiagnosticInstrumentationConfig         false
+-r--   DebugDiagnosticInstrumentationEvents         false
+-r--   DebugDiagnosticInstrumentationWeaving        false
+-r--   DebugDiagnosticInstrumentationWeavingMatches false
+-r--   DebugDiagnosticJdbcArchive                   false
+-r--   DebugDiagnosticLifecycleHandlers             false
+-r--   DebugDiagnosticQuery                         false
+-r--   DebugDiagnosticRuntimeControlDriver          false
+-r--   DebugDiagnosticRuntimeControlService         false
+-r--   DebugDiagnosticWatch                         false
+-r--   DebugDiagnosticWatchEvents                   false
+-r--   DebugDiagnosticWatchEventsDetails            false
+-r--   DebugDiagnosticWlstoreArchive                false
+-r--   DebugDiagnosticsBeanExtensionResolver        false
+-r--   DebugDiagnosticsBeanInfoProviders            false
+-r--   DebugDiagnosticsELContext                    false
+-r--   DebugDiagnosticsELResolver                   false
+-r--   DebugDiagnosticsExpressionEvaluators         false
+-r--   DebugDiagnosticsExpressionFunctionMapper     false
+-r--   DebugDiagnosticsExpressionFunctions          false
+-r--   DebugDiagnosticsExpressionMetrics            false
+-r--   DebugDiagnosticsExpressionPoller             false
+-r--   DebugDiagnosticsExpressionPollerBuffer       false
+-r--   DebugDiagnosticsHarvester                    false
+-r--   DebugDiagnosticsHarvesterData                false
+-r--   DebugDiagnosticsHarvesterMBeanPlugin         false
+-r--   DebugDiagnosticsHarvesterTreeBeanPlugin      false
+-r--   DebugDiagnosticsMBeanELResolver              false
+-r--   DebugDiagnosticsModule                       false
+-r--   DebugDiagnosticsScriptAction                 false
+-r--   DebugDiagnosticsUtils                        false
+-r--   DebugDiagnosticsValueTracingELResolver       false
+-r--   DebugDomainLogHandler                        false
+-r--   DebugDynamicSingletonServices                false
+-r--   DebugEjbCaching                              false
+-r--   DebugEjbCmpDeployment                        false
+-r--   DebugEjbCmpRuntime                           false
+-r--   DebugEjbCompilation                          false
+-r--   DebugEjbDeployment                           false
+-r--   DebugEjbInvoke                               false
+-r--   DebugEjbLocking                              false
+-r--   DebugEjbMdbConnection                        false
+-r--   DebugEjbMdbListener                          false
+-r--   DebugEjbMetadata                             false
+-r--   DebugEjbPooling                              false
+-r--   DebugEjbSecurity                             false
+-r--   DebugEjbSwapping                             false
+-r--   DebugEjbTimers                               false
+-r--   DebugElasticActions                          false
+-r--   DebugElasticServices                         false
+-r--   DebugEmbeddedLDAP                            false
+-r--   DebugEmbeddedLDAPLogLevel                    0
+-r--   DebugEmbeddedLDAPLogToConsole                false
+-r--   DebugEmbeddedLDAPWriteOverrideProps          false
+-r--   DebugEventManager                            false
+-r--   DebugExpressionBeanLocalizer                 false
+-r--   DebugExpressionExtensionsManager             false
+-r--   DebugFailOver                                false
+-r--   DebugFileDistributionServlet                 false
+-r--   DebugHttp                                    false
+-r--   DebugHttpConcise                             false
+-r--   DebugHttpLogging                             false
+-r--   DebugHttpSessions                            false
+-r--   DebugIIOP                                    false
+-r--   DebugIIOPConnection                          false
+-r--   DebugIIOPMarshal                             false
+-r--   DebugIIOPNaming                              false
+-r--   DebugIIOPOTS                                 false
+-r--   DebugIIOPReplacer                            false
+-r--   DebugIIOPSecurity                            false
+-r--   DebugIIOPStartup                             false
+-r--   DebugIIOPTransport                           false
+-r--   DebugIIOPTunneling                           false
+-r--   DebugInterceptors                            false
+-r--   DebugJ2EEManagement                          false
+-r--   DebugJAXPDebugLevel                          0
+-r--   DebugJAXPDebugName                           null
+-r--   DebugJAXPIncludeClass                        false
+-r--   DebugJAXPIncludeLocation                     false
+-r--   DebugJAXPIncludeName                         false
+-r--   DebugJAXPIncludeTime                         false
+-r--   DebugJAXPOutputStream                        null
+-r--   DebugJAXPUseShortClass                       false
+-r--   DebugJDBCConn                                false
+-r--   DebugJDBCDriverLogging                       false
+-r--   DebugJDBCInternal                            false
+-r--   DebugJDBCONS                                 false
+-r--   DebugJDBCRAC                                 false
+-r--   DebugJDBCRMI                                 false
+-r--   DebugJDBCReplay                              false
+-r--   DebugJDBCSQL                                 false
+-r--   DebugJDBCUCP                                 false
+-r--   DebugJMSAME                                  false
+-r--   DebugJMSBackEnd                              false
+-r--   DebugJMSBoot                                 false
+-r--   DebugJMSCDS                                  false
+-r--   DebugJMSClient                               false
+-r--   DebugJMSClientStackTrace                     false
+-r--   DebugJMSCommon                               false
+-r--   DebugJMSConfig                               false
+-r--   DebugJMSDispatcher                           false
+-r--   DebugJMSDispatcherProxy                      false
+-r--   DebugJMSDistTopic                            false
+-r--   DebugJMSDurableSubscribers                   false
+-r--   DebugJMSFrontEnd                             false
+-r--   DebugJMSJDBCScavengeOnFlush                  false
+-r--   DebugJMSLocking                              false
+-r--   DebugJMSMessagePath                          false
+-r--   DebugJMSModule                               false
+-r--   DebugJMSPauseResume                          false
+-r--   DebugJMSSAF                                  false
+-r--   DebugJMSStore                                false
+-r--   DebugJMST3Server                             false
+-r--   DebugJMSWrappers                             false
+-r--   DebugJMSXA                                   false
+-r--   DebugJMX                                     false
+-r--   DebugJMXCompatibility                        false
+-r--   DebugJMXCore                                 false
+-r--   DebugJMXCoreConcise                          false
+-r--   DebugJMXDomain                               false
+-r--   DebugJMXEdit                                 false
+-r--   DebugJMXRuntime                              false
+-r--   DebugJNDI                                    false
+-r--   DebugJNDIFactories                           false
+-r--   DebugJNDIResolution                          false
+-r--   DebugJTA2PC                                  false
+-r--   DebugJTA2PCStackTrace                        false
+-r--   DebugJTAAPI                                  false
+-r--   DebugJTACDI                                  false
+-r--   DebugJTAGateway                              false
+-r--   DebugJTAGatewayStackTrace                    false
+-r--   DebugJTAHealth                               false
+-r--   DebugJTAJDBC                                 false
+-r--   DebugJTALLR                                  false
+-r--   DebugJTALifecycle                            false
+-r--   DebugJTAMigration                            false
+-r--   DebugJTANaming                               false
+-r--   DebugJTANamingStackTrace                     false
+-r--   DebugJTANonXA                                false
+-r--   DebugJTAPropagate                            false
+-r--   DebugJTARMI                                  false
+-r--   DebugJTARecovery                             false
+-r--   DebugJTARecoveryStackTrace                   false
+-r--   DebugJTAResourceHealth                       false
+-r--   DebugJTAResourceName                         null
+-r--   DebugJTATLOG                                 false
+-r--   DebugJTATransactionName                      null
+-r--   DebugJTAXA                                   false
+-r--   DebugJTAXAStackTrace                         false
+-r--   DebugJpaDataCache                            false
+-r--   DebugJpaEnhance                              false
+-r--   DebugJpaJdbcJdbc                             false
+-r--   DebugJpaJdbcSchema                           false
+-r--   DebugJpaJdbcSql                              false
+-r--   DebugJpaManage                               false
+-r--   DebugJpaMetaData                             false
+-r--   DebugJpaProfile                              false
+-r--   DebugJpaQuery                                false
+-r--   DebugJpaRuntime                              false
+-r--   DebugJpaTool                                 false
+-r--   DebugLeaderElection                          false
+-r--   DebugLibraries                               false
+-r--   DebugLifecycleManager                        false
+-r--   DebugLoadBalancing                           false
+-r--   DebugLocalRemoteJVM                          false
+-r--   DebugLoggingConfiguration                    false
+-r--   DebugMBeanHarvesterControl                   false
+-r--   DebugMBeanHarvesterDataCollection            false
+-r--   DebugMBeanHarvesterResolution                false
+-r--   DebugMBeanHarvesterThreading                 false
+-r--   DebugMBeanTypeUtilQueue                      false
+-r--   DebugMBeanTypeUtilQueuePriority              false
+-r--   DebugMBeanTypeUtilityListener                false
+-r--   DebugMBeanTypingUtility                      false
+-r--   DebugManagementServicesResource              false
+-r--   DebugMaskCriterias                           null
+-r--   DebugMessaging                               false
+-r--   DebugMessagingBridgeRuntime                  false
+-r--   DebugMessagingBridgeRuntimeVerbose           false
+-r--   DebugMessagingBridgeStartup                  false
+-r--   DebugMessagingKernel                         false
+-r--   DebugMessagingKernelBoot                     false
+-r--   DebugMessagingKernelVerbose                  false
+-r--   DebugMessagingOwnableLock                    false
+-r--   DebugMuxer                                   false
+-r--   DebugMuxerConnection                         false
+-r--   DebugMuxerDetail                             false
+-r--   DebugMuxerException                          false
+-r--   DebugMuxerTimeout                            false
+-r--   DebugNodeManagerRuntime                      false
+-r--   DebugParameters                              null
+-r--   DebugPartitionResourceMetricsRuntime         false
+-r--   DebugPatchingRuntime                         false
+-r--   DebugPathSvc                                 false
+-r--   DebugPathSvcVerbose                          false
+-r--   DebugRA                                      false
+-r--   DebugRAClassloader                           false
+-r--   DebugRAConnEvents                            false
+-r--   DebugRAConnections                           false
+-r--   DebugRADeployment                            false
+-r--   DebugRALifecycle                             false
+-r--   DebugRALocalOut                              false
+-r--   DebugRAParsing                               false
+-r--   DebugRAPoolVerbose                           false
+-r--   DebugRAPooling                               false
+-r--   DebugRASecurityCtx                           false
+-r--   DebugRAWork                                  false
+-r--   DebugRAWorkEvents                            false
+-r--   DebugRAXAin                                  false
+-r--   DebugRAXAout                                 false
+-r--   DebugRAXAwork                                false
+-r--   DebugRC4                                     false
+-r--   DebugRCM                                     false
+-r--   DebugRESTNotifications                       false
+-r--   DebugRJVMRequestResponse                     false
+-r--   DebugRSA                                     false
+-r--   DebugReadyApp                                false
+-r--   DebugReplication                             false
+-r--   DebugReplicationDetails                      false
+-r--   DebugReplicationSize                         false
+-r--   DebugRestJersey1Integration                  false
+-r--   DebugRestJersey2Integration                  false
+-r--   DebugRestartInPlace                          false
+-r--   DebugRouting                                 false
+-r--   DebugSAFAdmin                                false
+-r--   DebugSAFLifeCycle                            false
+-r--   DebugSAFManager                              false
+-r--   DebugSAFMessagePath                          false
+-r--   DebugSAFReceivingAgent                       false
+-r--   DebugSAFSendingAgent                         false
+-r--   DebugSAFStore                                false
+-r--   DebugSAFTransport                            false
+-r--   DebugSAFVerbose                              false
+-r--   DebugSNMPAgent                               false
+-r--   DebugSNMPExtensionProvider                   false
+-r--   DebugSNMPProtocolTCP                         false
+-r--   DebugSNMPToolkit                             false
+-r--   DebugSSL                                     false
+-r--   DebugScaContainer                            false
+-r--   DebugSecurityAdjudicator                     false
+-r--   DebugSecurityAtn                             false
+-r--   DebugSecurityAtz                             false
+-r--   DebugSecurityAuditor                         false
+-r--   DebugSecurityCertPath                        false
+-r--   DebugSecurityCredMap                         false
+-r--   DebugSecurityEEngine                         false
+-r--   DebugSecurityEncryptionService               false
+-r--   DebugSecurityJACC                            false
+-r--   DebugSecurityJACCNonPolicy                   false
+-r--   DebugSecurityJACCPolicy                      false
+-r--   DebugSecurityKeyStore                        false
+-r--   DebugSecurityPasswordPolicy                  false
+-r--   DebugSecurityPredicate                       false
+-r--   DebugSecurityRealm                           false
+-r--   DebugSecurityRoleMap                         false
+-r--   DebugSecuritySAML2Atn                        false
+-r--   DebugSecuritySAML2CredMap                    false
+-r--   DebugSecuritySAML2Lib                        false
+-r--   DebugSecuritySAML2Service                    false
+-r--   DebugSecuritySAMLAtn                         false
+-r--   DebugSecuritySAMLCredMap                     false
+-r--   DebugSecuritySAMLLib                         false
+-r--   DebugSecuritySAMLService                     false
+-r--   DebugSecuritySSL                             false
+-r--   DebugSecuritySSLEaten                        false
+-r--   DebugSecurityService                         false
+-r--   DebugSecurityUserLockout                     false
+-r--   DebugSelfTuning                              false
+-r--   DebugServerLifeCycle                         false
+-r--   DebugServerMigration                         false
+-r--   DebugServerStartStatistics                   false
+-r--   DebugSituationalConfig                       false
+-r--   DebugStoreAdmin                              false
+-r--   DebugStoreIOLogical                          false
+-r--   DebugStoreIOLogicalBoot                      false
+-r--   DebugStoreIOPhysical                         false
+-r--   DebugStoreIOPhysicalVerbose                  false
+-r--   DebugStoreXA                                 false
+-r--   DebugStoreXAVerbose                          false
+-r--   DebugTunnelingConnection                     false
+-r--   DebugTunnelingConnectionTimeout              false
+-r--   DebugURLResolution                           false
+-r--   DebugVerboseRCM                              false
+-r--   DebugWANReplicationDetails                   false
+-r--   DebugWTCConfig                               false
+-r--   DebugWTCCorbaEx                              false
+-r--   DebugWTCGwtEx                                false
+-r--   DebugWTCJatmiEx                              false
+-r--   DebugWTCTDomPdu                              false
+-r--   DebugWTCUData                                false
+-r--   DebugWTCtBridgeEx                            false
+-r--   DebugWebAppIdentityAssertion                 false
+-r--   DebugWebAppModule                            false
+-r--   DebugWebAppSecurity                          false
+-r--   DebugWorkContext                             false
+-r--   DebugXMLEntityCacheDebugLevel                0
+-r--   DebugXMLEntityCacheDebugName                 null
+-r--   DebugXMLEntityCacheIncludeClass              false
+-r--   DebugXMLEntityCacheIncludeLocation           false
+-r--   DebugXMLEntityCacheIncludeName               false
+-r--   DebugXMLEntityCacheIncludeTime               false
+-r--   DebugXMLEntityCacheOutputStream              null
+-r--   DebugXMLEntityCacheUseShortClass             false
+-r--   DebugXMLRegistryDebugLevel                   0
+-r--   DebugXMLRegistryDebugName                    null
+-r--   DebugXMLRegistryIncludeClass                 false
+-r--   DebugXMLRegistryIncludeLocation              false
+-r--   DebugXMLRegistryIncludeName                  false
+-r--   DebugXMLRegistryIncludeTime                  false
+-r--   DebugXMLRegistryOutputStream                 null
+-r--   DebugXMLRegistryUseShortClass                false
+-r--   DefaultRJVMDiagMessages                      false
+-r--   DefaultStore                                 false
+-r--   DiagnosticContextDebugMode                   Off
+-r--   DynamicallyCreated                           false
+-r--   ForceGCEachDGCPeriod                         false
+-r--   Id                                           0
+-r--   ListenThreadDebug                            false
+-r--   LogDGCStatistics                             false
+-r--   MasterDeployer                               false
+-r--   Name                                         oms_server09
+-r--   Notes                                        null
+-r--   PartitionDebugLoggingEnabled                 false
+-r--   RedefiningClassLoader                        false
+-r--   Server                                       null
+-r--   SlaveDeployer                                false
+-r--   Tags                                         null
+-r--   Type                                         ServerDebug
+-r--   WebModule                                    false
+
+-r-x   freezeCurrentValue                           Void : String(attributeName)
+-r-x   getInheritedProperties                       String[] : String[](propertyNames)
+-r-x   isInherited                                  Boolean : String(propertyName)
+-r-x   isSet                                        Boolean : String(propertyName)
+-r-x   unSet                                        Void : String(propertyName)
