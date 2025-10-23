@@ -1,16 +1,10 @@
-Execute threads total
-Execute threads idle
-Threads stuck
-Threads standby
-Threads hogging
-Total complete requests
-WebLogic servlet execution time high
-WebLogic servlet execution time total
-Queue length 
-User requests pending
-Server channel - messages received
-Sockets accepted
-Throughput
+-Dweblogic.debug.DebugJMSBootstrap=true
+-Dweblogic.debug.DebugJMSBackEnd=true
+-Dweblogic.debug.DebugJMSCommon=true
+-Dweblogic.debug.DebugJNDI=true
+-Dweblogic.StdoutDebugEnabled=true
+-Dweblogic.log.StdoutSeverity=Debug
+
 
 sudo yum install wget
 cd /home/ssm-user/
