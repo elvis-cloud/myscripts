@@ -1,4 +1,4 @@
-# Introspect JMS ConnectionFactory and Connection objects (WLST-safe)
+# Introspect JMS ConnectionFactory and Connection objects (WLST-safe v3)
 
 from java.util import Hashtable
 from javax.naming import Context, InitialContext
@@ -18,7 +18,9 @@ def dump_getters(obj, label):
     methods = obj.getClass().getMethods()
     for m in methods:
         name = m.getName()
-        if name.startswith("get") and m.getParameterTypes().length == 0 and Modifier.isPublic(m.getModifiers()):
+        # only simple public no-arg getters
+        param_types = m.getParameterTypes()
+        if name.startswith("get") and len(param_types) == 0 and Modifier.isPublic(m.getModifiers()):
             try:
                 val = m.invoke(obj, None)
                 if val is None:
@@ -26,7 +28,7 @@ def dump_getters(obj, label):
                 sval = str(val)
                 if len(sval) > 1500:
                     sval = sval[:1500] + "...(truncated)"
-                # Only print interesting fields
+                # print only interesting values
                 if ("url" in name.lower() or
                     "address" in name.lower() or
                     "provider" in name.lower() or
@@ -43,6 +45,8 @@ def dump_getters(obj, label):
             except Exception, e:
                 pass
     print "--- end introspection ---\n"
+
+# ------------------------------------------------------------------
 
 banner("Building InitialContext to %s" % PROVIDER_URL)
 env = Hashtable()
