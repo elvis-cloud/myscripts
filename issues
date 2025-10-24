@@ -5,3 +5,9 @@
 -Dweblogic.log.StdoutSeverity=Debug \
 -Dweblogic.log.LogFileSeverity=Debug
 
+{
+          "name": "PaymentExecution",
+          "jvmArgs": "-Xms256m -Xmx256m",
+          "serverName": "PaymentExecution"
+        }
+
