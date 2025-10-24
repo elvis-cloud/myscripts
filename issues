@@ -1,10 +1,7 @@
-• Drain the JMS queues and shut down the agent servers
-• Shut down app servers
-• Shut down the JMS managed servers
-• Explicitly define the cluster address in the cluster properties using DNS
-• Explicitly defining the number of members in the cluster
-• Save and activate the changes
-• Start the JMS managed servers
-• Validate that all JMS servers can recognize all cluster members
-• Start the OMS app servers
-Start the agent servers
+-Dweblogic.debug.DebugJMSClient=true \
+-Dweblogic.debug.DebugJMSBoot=true \
+-Dweblogic.debug.DebugJNDI=true \
+-Dweblogic.StdoutDebugEnabled=true \
+-Dweblogic.log.StdoutSeverity=Debug \
+-Dweblogic.log.LogFileSeverity=Debug
+
