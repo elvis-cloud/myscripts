@@ -1,20 +1,13 @@
+export JAVA_OPTIONS="\
 -Dweblogic.debug.DebugJMSClient=true \
 -Dweblogic.debug.DebugJMSBoot=true \
+-Dweblogic.debug.DebugJMSCommon=true \
+-Dweblogic.debug.DebugJMSDispatcher=true \
 -Dweblogic.debug.DebugJNDI=true \
 -Dweblogic.StdoutDebugEnabled=true \
 -Dweblogic.log.StdoutSeverity=Debug \
--Dweblogic.log.LogFileSeverity=Debug
+-Dweblogic.log.LogFileSeverity=Debug \
+-Djdk.tls.client.protocols=TLSv1.2 \
+"
 
-{
-  "name": "PaymentExecution",
-  "serverName": "PaymentExecution",
-  "jvmArgs": "-Xms256m -Xmx256m \
-  -Dweblogic.debug.DebugJMSClient=true \
-  -Dweblogic.debug.DebugJMSBoot=true \
-  -Dweblogic.debug.DebugJNDI=true \
-  -Dweblogic.StdoutDebugEnabled=true \
-  -Dweblogic.log.StdoutSeverity=Debug \
-  -Dweblogic.log.LogFileSeverity=Debug"
-}
-
-
+$WL_HOME/common/bin/wlst.sh cs.py
