@@ -1,0 +1,84 @@
+[PaymentExecution JVM]
+   |
+   |  Step 1: Connects using PROVIDER_URL
+   |          PROVIDER_URL = t3s://oms-jms.mycompany.internal:8002
+   |          (This goes to the ELB via DNS)
+   |
+   |  Performs JNDI lookup for OMS_QCF
+   ▼
+[DNS Resolution of PROVIDER_URL]
+   |
+   |  The client JVM resolves oms-jms.mycompany.internal
+   |  → gets the Elastic Load Balancer (ELB) address
+   ▼
+[Elastic Load Balancer (ELB)]
+   |
+   |  Accepts the inbound T3s/T3S connection on port 8002
+   |  Forwards the request to one healthy JMS managed server
+   |  Example: forwards to oms_server21
+   ▼
+[oms_server21 (JMS managed server)]
+   |
+   |  Step 2: Stub Construction
+   |
+   |  oms_server21 now prepares the JMS client stub for OMS_QCF.
+   |  To do that, it uses the CLUSTER ADDRESS configured in WebLogic.
+   |
+   |      CLUSTER ADDRESS = jms-cluster.internal.example.com:8002
+   |      (Note: this is NOT necessarily the same as the Provider URL)
+   |
+   |  oms_server21 resolves the CLUSTER ADDRESS DNS name on the server side:
+   |      jms-cluster.internal.example.com
+   |      → resolves to all active JMS servers:
+   |          - 10.240.114.82   (oms_server20:8002)
+   |          - 10.240.114.115  (oms_server21:8002)
+   |          - 10.240.114.120  (oms_server22:8002)
+   |          - 10.240.114.176  (oms_server23:8002)
+   |
+   |  Using that resolution plus cluster runtime info,
+   |  oms_server21 builds a cluster-aware JMS stub that includes
+   |  ALL of those member addresses.
+   |
+   |  The stub is returned to the PaymentExecution JVM.
+   ▼
+[Cluster-Aware JMS Stub (returned to the client)]
+   |
+   |  Stub contains the full reachable member list:
+   |     - oms_server20:8002
+   |     - oms_server21:8002
+   |     - oms_server22:8002
+   |     - oms_server23:8002
+   |
+   |  This list is coming from the CLUSTER ADDRESS resolution,
+   |  not directly from the Provider URL.
+   |
+   |  The stub is now cached in the client and used for connections,
+   |  session creation, and failover.
+   ▼
+[Cluster Front End (CFE)]
+   |
+   |  Step 3: Consumer Placement
+   |
+   |  When the client thread creates a consumer on AGT.PaymentExecution,
+   |  the JMS server (via the CFE) decides:
+   |     “Which physical queue member in the uniform distributed queue
+   |      is least loaded right now?”
+   |
+   |  It assigns that consumer to that member.
+   |  (Example: oms_server23@AGT.PaymentExecution)
+   ▼
+[oms_server23@AGT.PaymentExecution]
+   |
+   |  Step 4: Attachment / Session Anchor
+   |
+   |  The client may now connect directly to oms_server23:8002
+   |  using the addresses it already got in the stub.
+   |
+   |  From this point on, that consumer thread drains
+   |  the member queue on oms_server23.
+   |
+   |  If oms_server23 goes down, the stub already knows
+   |  the other servers and can fail over.
+   ▼
+Client continues consuming and can fail over to any other JMS server
+without needing new config or a restart.
